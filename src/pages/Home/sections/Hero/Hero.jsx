@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
 import { Suspense, lazy } from 'react'
 import styles from './Hero.module.css'
 
@@ -8,36 +8,24 @@ const ChessBoard3D = lazy(() => import('../../../../components/ChessBoard3D/Ches
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      {/* Dynamic Blue Background */}
+      {/* Background */}
       <div className={styles.bg}>
         <div className={styles.gradientOrb1} />
         <div className={styles.gradientOrb2} />
         <div className={styles.gridOverlay} />
       </div>
 
-      {/* Playful Floating Pieces */}
-      <div className={styles.floatingPieces}>
-        <div className={`${styles.piece} ${styles.p1}`}>♚</div>
-        <div className={`${styles.piece} ${styles.p2}`}>♞</div>
-        <div className={`${styles.piece} ${styles.p3}`}>♟</div>
-        <div className={`${styles.piece} ${styles.p4}`}>♜</div>
-      </div>
-
       <div className="container">
         <div className={styles.inner}>
           {/* Left: Content */}
           <div className={styles.content}>
-            <div className={styles.badgeWrap}>
-              <div className={styles.badge}>
-                <span className={styles.badgeDot} />
-                India's Premier Chess Academy
-              </div>
+            <div className={styles.badge}>
+              <span className={styles.badgeDot} />
+              India's Premier Chess Academy
             </div>
 
             <h1 className={`hero-title ${styles.title}`}>
-              Master Chess. <br/>
-              <span className={styles.highlight}>Build Better</span><br/>
-              Thinkers.
+              Master Chess. <span className="gradient-text">Build Better</span> Thinkers.
             </h1>
 
             <p className={styles.subtitle}>
@@ -64,11 +52,11 @@ export default function Hero() {
             </div>
 
             <div className={styles.ctas}>
-              <Link to="/book-trial" className={styles.primaryBtn}>
+              <Link to="/book-trial" className="btn btn-gold btn-lg">
                 Book a Free Trial
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </Link>
-              <Link to="/#programs" className={styles.secondaryBtn}>
+              <Link to="/#programs" className="btn btn-outline btn-lg">
                 Explore Programs
               </Link>
             </div>
