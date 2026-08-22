@@ -1,6 +1,7 @@
 import Hero from './sections/Hero/Hero'
 import IntroVideo from './sections/IntroVideo/IntroVideo'
 import WhyBetter from './sections/WhyBetter/WhyBetter'
+import KidsZone from './sections/KidsZone/KidsZone'
 import Programs from './sections/Programs/Programs'
 import Coaches from './sections/Coaches/Coaches'
 import Testimonials from './sections/Testimonials/Testimonials'
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <IntroVideo />
       <WhyBetter />
+      <KidsZone />
       <Programs />
       <Coaches />
       <Testimonials />

@@ -116,57 +116,61 @@
   line-height: 1.6;
 }
 
-/* Journey Box */
-.journeyBox {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 30px;
-  padding: 60px;
-}
-
-/* Journey */
-.journey {
+/* New Creative Journey */
+.journeyCreative {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 60px;
-}
-
-.step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-  width: 120px;
-}
-
-.stepIcon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #0153D9, #013D96);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  border: 4px solid #ffffff;
-  box-shadow: 0 0 0 2px rgba(1, 83, 217, 0.3);
+  gap: 16px;
+  position: relative;
+  padding: 20px 0 60px;
 }
 
-.step h4 {
-  font-size: 1.1rem;
-  color: #F9D024;
-}
-
-.stepLine {
+.journeyCard {
   flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.journeyCard:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 40px rgba(1, 83, 217, 0.1);
+  border-color: rgba(1, 83, 217, 0.2);
+}
+
+.stepNum {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(1, 83, 217, 0.1);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.journeyContent h4 {
+  font-size: 1.25rem;
+  color: #0153D9;
+  margin-bottom: 12px;
+}
+
+.journeyContent p {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.65);
+  line-height: 1.5;
+}
+
+.journeyConnector {
+  width: 24px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(1, 83, 217, 0.5), transparent);
-  margin: 0 20px;
-  transform: translateY(-20px);
+  background: repeating-linear-gradient(90deg, rgba(1,83,217,0.3) 0, rgba(1,83,217,0.3) 4px, transparent 4px, transparent 8px);
+  margin-top: 80px;
 }
 
 @media (max-width: 1024px) {
@@ -185,31 +189,27 @@
 }
 
 @media (max-width: 768px) {
-  .journey {
+  .journeyCreative {
     flex-direction: column;
+    align-items: center;
     gap: 32px;
-    align-items: flex-start;
   }
-
-  .step {
-    flex-direction: row;
+  
+  .journeyCard {
     width: 100%;
-    text-align: left;
+    transform: none !important;
   }
 
-  .stepLine {
+  .journeyConnector {
     width: 2px;
-    height: 30px;
-    background: linear-gradient(180deg, rgba(1, 83, 217, 0.5), transparent);
-    margin: 0 0 0 29px;
-    transform: none;
+    height: 32px;
+    margin: 0;
+    transform: none !important;
+    background: repeating-linear-gradient(180deg, rgba(1,83,217,0.3) 0, rgba(1,83,217,0.3) 4px, transparent 4px, transparent 8px);
   }
 
   .grid {
     grid-template-columns: 1fr;
   }
-  
-  .journeyBox {
-    padding: 32px 24px;
-  }
 }
+

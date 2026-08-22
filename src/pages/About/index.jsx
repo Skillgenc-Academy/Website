@@ -81,37 +81,61 @@ export default function About() {
       </section>
 
       {/* The Journey */}
-      <section className="section">
+      <section className="section" style={{ background: '#f8f9fc', color: '#000' }}>
         <div className="container">
-          <div className={styles.journeyBox}>
-            <div className="section-header" style={{ textAlign: 'center' }}>
-              <h2 className="section-title">The Student <span className="gradient-text">Journey</span></h2>
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 className="section-title" style={{ color: '#000' }}>The Student <span className="gradient-text">Journey</span></h2>
+            <p className="section-subtitle" style={{ color: 'rgba(0,0,0,0.6)', margin: '16px auto 0' }}>
+              A proven step-by-step methodology to take you from beginner to champion.
+            </p>
+          </div>
+          
+          <div className={styles.journeyCreative}>
+            <div className={styles.journeyCard}>
+              <div className={styles.stepNum}>01</div>
+              <div className={styles.journeyContent}>
+                <h4>Learn</h4>
+                <p>Master fundamental concepts, opening principles, and advanced positional theories.</p>
+              </div>
             </div>
             
-            <div className={styles.journey}>
-              <div className={styles.step}>
-                <div className={styles.stepIcon}>1</div>
-                <h4>Learn</h4>
-              </div>
-              <div className={styles.stepLine} />
-              <div className={styles.step}>
-                <div className={styles.stepIcon}>2</div>
+            <div className={styles.journeyConnector} />
+
+            <div className={styles.journeyCard} style={{ transform: 'translateY(30px)' }}>
+              <div className={styles.stepNum}>02</div>
+              <div className={styles.journeyContent}>
                 <h4>Practice</h4>
+                <p>Sharpen your vision with daily tactical puzzles and customized training exercises.</p>
               </div>
-              <div className={styles.stepLine} />
-              <div className={styles.step}>
-                <div className={styles.stepIcon}>3</div>
+            </div>
+
+            <div className={styles.journeyConnector} style={{ transform: 'translateY(30px)' }} />
+
+            <div className={styles.journeyCard}>
+              <div className={styles.stepNum}>03</div>
+              <div className={styles.journeyContent}>
                 <h4>Play</h4>
+                <p>Test your skills in our internal tournaments and friendly practice matches.</p>
               </div>
-              <div className={styles.stepLine} />
-              <div className={styles.step}>
-                <div className={styles.stepIcon}>4</div>
+            </div>
+
+            <div className={styles.journeyConnector} />
+
+            <div className={styles.journeyCard} style={{ transform: 'translateY(30px)' }}>
+              <div className={styles.stepNum}>04</div>
+              <div className={styles.journeyContent}>
                 <h4>Analyze</h4>
+                <p>Deep-dive into your past games with our coaches to identify and fix blunders.</p>
               </div>
-              <div className={styles.stepLine} />
-              <div className={styles.step}>
-                <div className={styles.stepIcon}>5</div>
+            </div>
+
+            <div className={styles.journeyConnector} style={{ transform: 'translateY(30px)' }} />
+
+            <div className={styles.journeyCard}>
+              <div className={styles.stepNum}>05</div>
+              <div className={styles.journeyContent}>
                 <h4>Improve</h4>
+                <p>Watch your rating climb as you become a stronger, more confident player.</p>
               </div>
             </div>
           </div>

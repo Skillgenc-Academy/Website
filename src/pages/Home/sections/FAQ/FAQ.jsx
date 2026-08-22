@@ -40,23 +40,19 @@ export default function FAQ() {
 
   return (
     <section className={`section ${styles.section}`}>
-      <div className="container">
-        <div className={styles.inner}>
-          {/* Left: Text */}
-          <div className={styles.textContent}>
-            <div className="section-tag">✦ FAQ</div>
-            <h2 className="section-title">
-              Common <span className="gradient-text">Questions</span>
-            </h2>
-            <p className="section-subtitle" style={{ margin: '16px 0 32px' }}>
-              Everything you need to know about our programs, methodology, and the 
-              chess learning journey.
-            </p>
-            <div className={styles.bgPiece}>?</div>
-          </div>
+      <div className="container" style={{ maxWidth: '800px' }}>
+        <div className="section-header">
+          <div className="section-tag" style={{ marginBottom: '16px' }}>✦ FAQ</div>
+          <h2 className="section-title">
+            Common <span className="gradient-text">Questions</span>
+          </h2>
+          <p className="section-subtitle" style={{ marginTop: '16px' }}>
+            Everything you need to know about our programs, methodology, and the 
+            chess learning journey.
+          </p>
+        </div>
 
-          {/* Right: Accordion */}
-          <div className={styles.accordion}>
+        <div className={styles.accordion}>
             {faqs.map((faq) => (
               <AccordionItem
                 key={faq.id}
@@ -67,7 +63,6 @@ export default function FAQ() {
             ))}
           </div>
         </div>
-      </div>
     </section>
   )
 }
