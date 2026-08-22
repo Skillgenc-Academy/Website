@@ -1,0 +1,215 @@
+.page {
+  padding-top: 80px;
+}
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.statsRow h4 {
+  font-size: 2rem;
+  color: #F9D024;
+  margin-bottom: 4px;
+}
+
+.statsRow p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statLine {
+  width: 1px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.heroImage {
+  position: relative;
+}
+
+.heroImage::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border: 1px solid rgba(1, 83, 217, 0.3);
+  border-radius: 30px;
+  z-index: 0;
+  transform: rotate(3deg);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  background: #f8f9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(1, 83, 217, 0.05);
+  border-color: rgba(1, 83, 217, 0.3);
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  background: rgba(1, 83, 217, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F9D024;
+  margin: 0 auto 24px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+}
+
+/* Journey Box */
+.journeyBox {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  padding: 60px;
+}
+
+/* Journey */
+.journey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 120px;
+}
+
+.stepIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0153D9, #013D96);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 2px rgba(1, 83, 217, 0.3);
+}
+
+.step h4 {
+  font-size: 1.1rem;
+  color: #F9D024;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(1, 83, 217, 0.5), transparent);
+  margin: 0 20px;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .statsRow {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .journey {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .step {
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+  }
+
+  .stepLine {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(1, 83, 217, 0.5), transparent);
+    margin: 0 0 0 29px;
+    transform: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .journeyBox {
+    padding: 32px 24px;
+  }
+}

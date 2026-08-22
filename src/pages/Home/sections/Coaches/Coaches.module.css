@@ -1,0 +1,194 @@
+.section {
+  background: #ffffff;
+}
+
+.swiperWrap {
+  position: relative;
+}
+
+/* Nav Buttons */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(1,83,217,0.15);
+  border: 1px solid rgba(1,83,217,0.4);
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.navBtn:hover {
+  background: #0153D9;
+  border-color: #0153D9;
+  box-shadow: 0 0 20px rgba(1,83,217,0.5);
+}
+
+.prev { left: -24px; }
+.next { right: -24px; }
+
+/* Card */
+.card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(1,83,217,0.2);
+  border-radius: 24px;
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.35s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  border-color: rgba(1,83,217,0.5);
+  transform: translateY(-6px);
+  background: rgba(1,83,217,0.06);
+}
+
+.card:hover .cardGlow { opacity: 1; }
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(1,83,217,0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Avatar */
+.avatarWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0153D9, #013D96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid rgba(1,83,217,0.5);
+  flex-shrink: 0;
+}
+
+.avatarInitial {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.avatarGlow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(1,83,217,0.3);
+}
+
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(249,208,36,0.12);
+  border: 1px solid rgba(249,208,36,0.3);
+  color: #F9D024;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+/* Info */
+.info { display: flex; flex-direction: column; gap: 3px; }
+
+.name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.designation {
+  font-size: 0.85rem;
+  color: #0153D9;
+  font-weight: 600;
+}
+
+.rating {
+  font-size: 0.82rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.experience {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Description */
+.description {
+  font-size: 0.88rem;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.7;
+}
+
+/* Achievements */
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.achievement {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(1,83,217,0.12);
+  border: 1px solid rgba(1,83,217,0.25);
+  color: rgba(0, 0, 0, 0.65);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* Specialization */
+.spec {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.specLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.specValue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 768px) {
+  .prev { left: -8px; }
+  .next { right: -8px; }
+}

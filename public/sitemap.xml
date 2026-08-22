@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://skillgenc.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/pricing</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/platform</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/contact</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/book-trial</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>

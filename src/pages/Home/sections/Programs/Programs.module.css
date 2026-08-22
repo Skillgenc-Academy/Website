@@ -1,0 +1,359 @@
+.section {
+  background: linear-gradient(180deg, #f8f9fc 0%, #ffffff 100%);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.55);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab:hover {
+  border-color: rgba(1,83,217,0.4);
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(1,83,217,0.08);
+}
+
+.tabActive {
+  background: rgba(1,83,217,0.18) !important;
+  border-color: #0153D9 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 20px rgba(1,83,217,0.25);
+}
+
+.tabPremium.tabActive {
+  background: rgba(249,208,36,0.15) !important;
+  border-color: #F9D024 !important;
+  box-shadow: 0 0 20px rgba(249,208,36,0.25);
+}
+
+.tabPiece {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.tabLabel {
+  white-space: nowrap;
+}
+
+.premiumBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: #F9D024;
+  color: #000;
+  padding: 2px 7px;
+  border-radius: 50px;
+  line-height: 1.4;
+}
+
+/* Card */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(1,83,217,0.25);
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  animation: cardAppear 0.4s ease both;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cardPremium {
+  border-color: rgba(249,208,36,0.35);
+  background: rgba(249,208,36,0.03);
+}
+
+.premiumGlow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 28px;
+  background: transparent;
+  box-shadow: 0 0 60px rgba(249,208,36,0.15), inset 0 0 60px rgba(249,208,36,0.04);
+  pointer-events: none;
+  animation: goldPulse 3s ease-in-out infinite;
+}
+
+@keyframes goldPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Card Left */
+.cardLeft {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-right: 1px solid rgba(1,83,217,0.15);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.cardPremium .cardLeft {
+  border-right-color: rgba(249,208,36,0.15);
+}
+
+.pieceDisplay {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.bigPiece {
+  font-size: 4.5rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  animation: floatPiece 3s ease-in-out infinite;
+}
+
+@keyframes floatPiece {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.pieceGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(1,83,217,0.3), transparent 70%);
+  filter: blur(10px);
+}
+
+.pieceName {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0153D9;
+  margin-bottom: 4px;
+}
+
+.cardPremium .pieceName { color: #F9D024; }
+
+.levelTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  font-size: 0.88rem;
+  color: rgba(0, 0, 0, 0.45);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Metrics */
+.metrics {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(1,83,217,0.08);
+  border: 1px solid rgba(1,83,217,0.2);
+  border-radius: 16px;
+}
+
+.cardPremium .metrics {
+  background: rgba(249,208,36,0.06);
+  border-color: rgba(249,208,36,0.2);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  text-align: center;
+}
+
+.metricValue {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.metricLabel {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.metricDiv {
+  width: 1px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* CTAs */
+.ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Card Right */
+.cardRight {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(1, 83, 217, 0.02);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.featuresTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.checkIcon {
+  color: #0153D9;
+  flex-shrink: 0;
+}
+
+.cardPremium .checkIcon { color: #F9D024; }
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.dotActive {
+  background: #0153D9;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card { grid-template-columns: 1fr; }
+  .cardLeft { border-right: none; border-bottom: 1px solid rgba(1,83,217,0.15); }
+  .tabs { gap: 8px; }
+  .tab { padding: 10px 16px; font-size: 0.82rem; }
+}
+
+@media (max-width: 640px) {
+  .cardLeft, .cardRight { padding: 32px 24px; }
+  
+  /* Tabs as 3-column grid */
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-bottom: 0;
+    margin-bottom: 32px;
+  }
+  
+  .tab {
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 8px;
+    border-radius: 16px;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .tabPiece {
+    font-size: 1.6rem;
+  }
+  
+  .tabLabel {
+    font-size: 0.75rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  /* Center the card content */
+  .cardLeft {
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .metrics {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 16px 12px;
+    box-sizing: border-box;
+  }
+
+  .ctas { flex-direction: column; width: 100%; box-sizing: border-box; }
+  .ctas .btn { width: 100%; justify-content: center; box-sizing: border-box; }
+}

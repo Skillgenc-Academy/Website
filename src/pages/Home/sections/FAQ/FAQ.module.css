@@ -1,0 +1,123 @@
+.section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.textContent {
+  position: sticky;
+  top: 120px;
+}
+
+.bgPiece {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15rem;
+  font-weight: 900;
+  color: rgba(1, 83, 217, 0.05);
+  line-height: 1;
+  margin-top: -40px;
+  margin-left: -20px;
+  user-select: none;
+}
+
+/* Accordion */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.item.open {
+  background: rgba(1, 83, 217, 0.06);
+  border-color: rgba(1, 83, 217, 0.3);
+  box-shadow: 0 4px 20px rgba(1, 83, 217, 0.1);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  background: transparent;
+  text-align: left;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.item:not(.open) .header:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.question {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.item.open .question {
+  color: #F9D024;
+}
+
+.icon {
+  color: #0153D9;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(1, 83, 217, 0.1);
+  transition: all 0.3s ease;
+}
+
+.item.open .icon {
+  background: #F9D024;
+  color: #000;
+  transform: rotate(180deg);
+}
+
+.contentWrap {
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.content {
+  padding: 0 24px 24px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .textContent {
+    position: static;
+    text-align: center;
+  }
+  .bgPiece {
+    display: none;
+  }
+}
