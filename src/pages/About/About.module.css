@@ -166,11 +166,13 @@
   line-height: 1.5;
 }
 
-.journeyConnector {
-  width: 24px;
-  height: 2px;
-  background: repeating-linear-gradient(90deg, rgba(1,83,217,0.3) 0, rgba(1,83,217,0.3) 4px, transparent 4px, transparent 8px);
+.journeyArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0153D9;
   margin-top: 80px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
@@ -200,12 +202,9 @@
     transform: none !important;
   }
 
-  .journeyConnector {
-    width: 2px;
-    height: 32px;
+  .journeyArrow {
     margin: 0;
-    transform: none !important;
-    background: repeating-linear-gradient(180deg, rgba(1,83,217,0.3) 0, rgba(1,83,217,0.3) 4px, transparent 4px, transparent 8px);
+    transform: rotate(90deg);
   }
 
   .grid {

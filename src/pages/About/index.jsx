@@ -99,9 +99,9 @@ export default function About() {
               </div>
             </div>
             
-            <div className={styles.journeyConnector} />
+            <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
 
-            <div className={styles.journeyCard} style={{ transform: 'translateY(30px)' }}>
+            <div className={styles.journeyCard}>
               <div className={styles.stepNum}>02</div>
               <div className={styles.journeyContent}>
                 <h4>Practice</h4>
@@ -109,7 +109,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className={styles.journeyConnector} style={{ transform: 'translateY(30px)' }} />
+            <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
 
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>03</div>
@@ -119,9 +119,9 @@ export default function About() {
               </div>
             </div>
 
-            <div className={styles.journeyConnector} />
+            <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
 
-            <div className={styles.journeyCard} style={{ transform: 'translateY(30px)' }}>
+            <div className={styles.journeyCard}>
               <div className={styles.stepNum}>04</div>
               <div className={styles.journeyContent}>
                 <h4>Analyze</h4>
@@ -129,7 +129,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className={styles.journeyConnector} style={{ transform: 'translateY(30px)' }} />
+            <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
 
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>05</div>
@@ -139,17 +139,6 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section section-dark" style={{ borderTop: '1px solid rgba(1,83,217,0.2)' }}>
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2 className="section-title" style={{ marginBottom: '24px' }}>Ready to Start?</h2>
-          <Link to="/book-trial" className="btn btn-gold btn-lg">
-            Book a Free Trial
-            <ArrowRight size={18} />
-          </Link>
         </div>
       </section>
     </div>
