@@ -40,36 +40,35 @@ export default function LifeAtSkillgenc() {
           <Swiper
             modules={[Navigation, Autoplay]}
             navigation={{ prevEl: '#lifePrev', nextEl: '#lifeNext' }}
-            autoplay={{ delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             spaceBetween={24}
             slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
             loop
             className={styles.swiper}
           >
-            {galleryImages.map((img) => (
-              <SwiperSlide key={img.id}>
-                <div className={styles.imageCard}>
-                  <img 
-                    src={img.src} 
-                    alt={img.alt} 
-                    className={styles.image}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  {/* Fallback Placeholder if image is missing */}
-                  <div className={styles.imagePlaceholder} style={{ display: 'none' }}>
-                    <Camera size={32} className={styles.placeholderIcon} />
-                    <span>Upload {img.src}</span>
-                  </div>
-                  <div className={styles.overlay}>
-                    <p className={styles.caption}>{img.alt}</p>
-                  </div>
+            {[1, 2, 3].map((slideIndex) => (
+              <SwiperSlide key={slideIndex}>
+                <div className={styles.bentoGrid}>
+                  {galleryImages.map((img, index) => (
+                    <div key={img.id + '-' + slideIndex} className={`${styles.imageCard} ${styles['item' + (index + 1)]}`}>
+                      <img 
+                        src={img.src} 
+                        alt={img.alt} 
+                        className={styles.image}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className={styles.imagePlaceholder} style={{ display: 'none' }}>
+                        <Camera size={32} className={styles.placeholderIcon} />
+                        <span>Upload {img.src}</span>
+                      </div>
+                      <div className={styles.overlay}>
+                        <p className={styles.caption}>{img.alt}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </SwiperSlide>
             ))}

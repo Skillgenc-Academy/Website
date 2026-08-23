@@ -46,10 +46,10 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="section section-dark-blue">
+      <section className="section" style={{ background: '#0153D9' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 className="section-title">Our <span className="gradient-text">Philosophy</span></h2>
+            <h2 className="section-title" style={{ color: '#ffffff' }}>Our <span style={{ color: '#F9D024' }}>Philosophy</span></h2>
           </div>
           <div className={styles.grid}>
             <div className={styles.card}>

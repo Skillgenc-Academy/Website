@@ -57,10 +57,10 @@ export default function WhyBetter() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">✦ Why Skillgenc</div>
-          <h2 className="section-title" style={{ color: '#ffffff' }}>
+          <h2 className="section-title">
             Why We Are <span className="gradient-text">Better Than Others</span>
           </h2>
-          <p className="section-subtitle" style={{ margin: '16px auto 0', color: 'rgba(255,255,255,0.7)' }}>
+          <p className="section-subtitle" style={{ margin: '16px auto 0' }}>
             We combine professional coaching methodology with modern learning tools to deliver
             results that traditional chess classes simply cannot match.
           </p>

@@ -60,10 +60,10 @@ export default function Achievements() {
       <div className="container">
         <div className={styles.header}>
           <div className="section-tag">✦ Our Impact</div>
-          <h2 className="section-title" style={{ color: '#000000' }}>
+          <h2 className="section-title" style={{ color: '#ffffff' }}>
             Numbers That <span style={{ color: '#F9D024' }}>Tell Our Story</span>
           </h2>
-          <p className="section-subtitle" style={{ margin: '16px auto 0' }}>
+          <p className="section-subtitle" style={{ margin: '16px auto 0', color: 'rgba(255,255,255,0.7)' }}>
             A decade of chess education, thousands of transformed students, and a growing
             community of competitive players across India.
           </p>

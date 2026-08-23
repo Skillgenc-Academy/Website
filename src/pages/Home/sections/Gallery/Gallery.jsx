@@ -53,25 +53,32 @@ export default function Gallery() {
             {achievements.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className={styles.card}>
-                  <div className={styles.imageWrap}>
-                    <img 
-                      src={item.photo} 
-                      alt={item.student} 
-                      className={styles.studentPhoto}
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
-                      }}
-                    />
-                    <div className={styles.imagePlaceholder} style={{ display: 'none' }}>
-                      <span className={styles.emoji}>{item.emoji}</span>
-                    </div>
+                  {/* Full Background Image */}
+                  <img 
+                    src={item.photo} 
+                    alt={item.student} 
+                    className={styles.bgImage}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'block';
+                    }}
+                  />
+                  {/* Fallback Gradient if image fails to load */}
+                  <div className={styles.bgFallback} style={{ display: 'none' }} />
+                  
+                  {/* Gradient Overlay for Text Readability */}
+                  <div className={styles.overlay} />
+
+                  {/* Floating Emoji Badge */}
+                  <div className={styles.floatingBadge}>
+                    {item.emoji}
                   </div>
+
+                  {/* Content at Bottom */}
                   <div className={styles.content}>
-                    <h3 className={styles.title}>{item.title}</h3>
-                    <p className={styles.student}>{item.student}</p>
+                    <div className={styles.achievementTag}>{item.title}</div>
+                    <h3 className={styles.studentName}>{item.student}</h3>
                   </div>
-                  <div className={styles.cardGlow} />
                 </div>
               </SwiperSlide>
             ))}
