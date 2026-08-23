@@ -33,17 +33,28 @@ export default function Contact() {
     setStatus('loading')
 
     try {
+      const formParams = new URLSearchParams()
+      for (const key in formData) {
+        formParams.append(key, formData[key])
+      }
+
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors', // Important for Google Scripts
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(formData)
+        body: formParams.toString()
       })
       
       setStatus('success')
-      setFormData({ parentName: '', childName: '', phone: '', email: '', age: '' })
+      setFormData({
+        parentName: '',
+        childName: '',
+        phone: '',
+        email: '',
+        age: ''
+      })
     } catch (error) {
       console.error('Error submitting form:', error)
       setStatus('error')

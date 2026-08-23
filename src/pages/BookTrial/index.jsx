@@ -34,13 +34,18 @@ export default function BookTrial() {
     setStatus('loading')
     
     try {
+      const formParams = new URLSearchParams()
+      for (const key in formData) {
+        formParams.append(key, formData[key])
+      }
+
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(formData)
+        body: formParams.toString()
       })
       setStatus('success')
     } catch (error) {
