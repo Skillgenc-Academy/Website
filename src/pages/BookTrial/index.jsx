@@ -19,7 +19,7 @@ export default function BookTrial() {
   const [status, setStatus] = useState('idle')
 
   // Replace this URL with your Google Apps Script Web App URL
-  const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE'
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyOPuOi7teoebRUy4N2M61FyRQabKazWRua27lnTgH2X3ooTzp00JkOEH-vzZ-bUoG36g/exec'
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
