@@ -12,13 +12,20 @@
   overflow: hidden;
 }
 
+/* Ensure content stays above clouds */
+.hero > div {
+  position: relative;
+  z-index: 2;
+}
+
 /* Playful clouds in background */
 .hero::before, .hero::after {
   content: '☁️';
   position: absolute;
   font-size: 80px;
-  opacity: 0.8;
+  opacity: 0.5; /* Slightly reduced opacity so they don't distract */
   animation: floatCloud 10s infinite alternate ease-in-out;
+  z-index: 1;
 }
 
 .hero::before {
@@ -370,6 +377,10 @@
 }
 
 @media (max-width: 992px) {
+  .hero::before, .hero::after {
+    display: none; /* Hide clouds on mobile for better readability */
+  }
+
   .featureRow, .reverse {
     grid-template-columns: 1fr;
     gap: 40px;

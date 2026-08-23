@@ -294,13 +294,12 @@
   .ctas { justify-content: center; }
   
   .canvasWrap { 
-    position: absolute;
-    inset: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.35;
-    pointer-events: none;
+    height: 400px;
+    z-index: 1;
+    opacity: 1;
+    pointer-events: auto;
     margin-top: 0;
   }
   
@@ -314,4 +313,5 @@
   .ctas { flex-direction: column; width: 100%; gap: 12px; }
   .ctas .btn { width: 100%; justify-content: center; }
   .title { font-size: clamp(2rem, 8vw, 2.5rem) !important; }
+  .canvasWrap { height: 280px; }
 }
