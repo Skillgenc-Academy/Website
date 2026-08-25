@@ -120,13 +120,13 @@ export default function About() {
       </section>
 
       {/* 04 — Our Reach */}
-      <section className="section" style={{ background: '#050a18' }}>
+      <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <div className={styles.reachInner}>
             <div className={styles.reachText}>
-              <div className="section-tag" style={{ color: 'rgba(255,255,255,0.5)' }}>♟ Global Presence</div>
+              <div className="section-tag" style={{ color: '#0153D9' }}>♟ Global Presence</div>
               <h2 className={styles.reachHeading}>
-                From Bengaluru <span style={{ color: '#F9D024' }}>to the World</span>
+                From Bengaluru <span style={{ color: '#0153D9' }}>to the World</span>
               </h2>
               <p className={styles.reachSub}>
                 From our communities in India to learners around the world, Skillgenc is helping children
@@ -165,7 +165,7 @@ export default function About() {
       </section>
 
       {/* 05 — Our Presence in India */}
-      <section className="section" style={{ background: '#ffffff' }}>
+      <section className="section" style={{ background: '#f8f9fc' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
             <div className="section-tag">♟ On the Ground</div>
