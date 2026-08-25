@@ -9,6 +9,7 @@ import GoogleReviews from './sections/GoogleReviews/GoogleReviews'
 import Gallery from './sections/Gallery/Gallery'
 import LifeAtSkillgenc from './sections/LifeAtSkillgenc/LifeAtSkillgenc'
 import Achievements from './sections/Achievements/Achievements'
+import OnlineVsOffline from './sections/OnlineVsOffline/OnlineVsOffline'
 import FAQ from './sections/FAQ/FAQ'
 import { Helmet } from 'react-helmet-async'
 
@@ -27,6 +28,7 @@ export default function Home() {
       <Coaches />
       <Testimonials />
       <GoogleReviews />
+      <OnlineVsOffline />
       <Gallery />
       <LifeAtSkillgenc />
       <Achievements />

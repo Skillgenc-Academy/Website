@@ -1,0 +1,38 @@
+.policyContainer {
+  background: #ffffff;
+  border: 1px solid rgba(1, 83, 217, 0.2);
+  border-radius: 24px;
+  padding: 50px;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.policyContainer h3 {
+  font-size: 1.5rem;
+  color: #0153D9;
+  margin: 32px 0 16px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.policyContainer p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.policyContainer ul {
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+
+.policyContainer ul li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .policyContainer {
+    padding: 30px 20px;
+  }
+}
