@@ -1,28 +1,35 @@
-import { Globe, Building2, Star, Check, Minus } from 'lucide-react'
+import { Check, X, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import styles from './OnlineVsOffline.module.css'
 
 const comparisonData = [
-  { label: 'Convenience', online: 5, offline: 3 },
-  { label: 'Personalization', online: 5, offline: 3 },
-  { label: 'Coach Accessibility', online: 5, offline: 3 },
-  { label: 'Game Analysis', online: 5, offline: 3 },
-  { label: 'Progress Tracking', online: 5, offline: 2 },
-  { label: 'Flexibility', online: 5, offline: 2 },
-  { label: 'Technology & Tools', online: 5, offline: 3 },
-  { label: 'Travel Required', online: 'No', offline: 'Yes' },
+  { feature: 'Convenience', online: 5, offline: 3 },
+  { feature: 'Personalization', online: 5, offline: 3 },
+  { feature: 'Coach Accessibility', online: 5, offline: 3 },
+  { feature: 'Game Analysis', online: 5, offline: 3 },
+  { feature: 'Progress Tracking', online: 5, offline: 2 },
+  { feature: 'Flexibility', online: 5, offline: 2 },
+  { feature: 'Technology & Tools', online: 5, offline: 3 },
+  { feature: 'Travel Required', online: 'No', offline: 'Yes' },
 ]
 
 function StarRating({ count }) {
   return (
     <div className={styles.stars}>
-      {[...Array(5)].map((_, i) => (
-        <Star
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
           key={i}
-          size={16}
-          fill={i < count ? '#FFB800' : 'transparent'}
-          color={i < count ? '#FFB800' : 'rgba(0,0,0,0.1)'}
-          className={styles.starIcon}
-        />
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill={i < count ? '#F9D024' : '#E5E7EB'}
+          stroke={i < count ? '#F9D024' : '#E5E7EB'}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
       ))}
     </div>
   )
@@ -32,59 +39,98 @@ export default function OnlineVsOffline() {
   return (
     <section className={`section ${styles.section}`}>
       <div className="container">
-        <div className="section-header">
-          <div className="section-tag">✦ The Future of Learning</div>
+        <div className={styles.header}>
+          <div className="section-tag">✦ The Smart Choice</div>
           <h2 className="section-title">
-            Online vs Offline <span className="gradient-text">Chess Classes</span>
+            Why Choose <span className="gradient-text">Online Chess Coaching?</span>
           </h2>
-          <p className="section-subtitle" style={{ margin: '16px auto 0' }}>
+          <p className="section-subtitle" style={{ maxWidth: '800px', margin: '16px auto 0' }}>
             It's not just about learning chess online. It's about creating a smarter, more personalized and measurable learning experience for your child.
           </p>
-          <div className="divider" />
+          
+          <div className={styles.pillList}>
+            <span>Expert Coaching</span>
+            <span className={styles.dot}>•</span>
+            <span>Personalized Learning</span>
+            <span className={styles.dot}>•</span>
+            <span>Game Analysis</span>
+            <span className={styles.dot}>•</span>
+            <span>Regular Assessments</span>
+            <span className={styles.dot}>•</span>
+            <span>Progress Tracking</span>
+          </div>
         </div>
 
-        <div className={styles.comparisonTable}>
-          <div className={styles.row}>
-            <div className={styles.labelCol}></div>
-            <div className={`${styles.valCol} ${styles.valOnlineHeader}`}>
-              <Globe size={24} className={styles.headerIcon} />
-              <h3>ONLINE CHESS COACHING</h3>
+        <div className={styles.comparisonWrapper}>
+          <div className={styles.tableCard}>
+            
+            <div className={styles.tableHeader}>
+              <div className={styles.colFeature}></div>
+              <div className={styles.colOnline}>
+                <div className={styles.colHighlight}>
+                  <ShieldCheck className={styles.icon} size={28} />
+                  <h3>Online Coaching</h3>
+                  <p className={styles.badge}>Skillgenc Method</p>
+                </div>
+              </div>
+              <div className={styles.colOffline}>
+                <h3>Offline Classes</h3>
+                <p>Traditional</p>
+              </div>
             </div>
-            <div className={`${styles.valCol} ${styles.valOfflineHeader}`}>
-              <Building2 size={24} className={styles.headerIcon} />
-              <h3>OFFLINE CHESS CLASSES</h3>
-            </div>
-          </div>
 
-          {comparisonData.map((item, idx) => (
-            <div key={idx} className={styles.row}>
-              <div className={styles.labelCol}>
-                <span className={styles.labelText}>{item.label}</span>
-              </div>
-              <div className={`${styles.valCol} ${styles.valOnline}`}>
-                {typeof item.online === 'number' ? (
-                  <StarRating count={item.online} />
-                ) : (
-                  <span className={styles.textHighlight}>{item.online}</span>
-                )}
-              </div>
-              <div className={`${styles.valCol} ${styles.valOffline}`}>
-                {typeof item.offline === 'number' ? (
-                  <StarRating count={item.offline} />
-                ) : (
-                  <span className={styles.textDim}>{item.offline}</span>
-                )}
-              </div>
+            <div className={styles.tableBody}>
+              {comparisonData.map((row, idx) => (
+                <div key={idx} className={styles.tableRow}>
+                  <div className={styles.colFeature}>
+                    <span className={styles.featureName}>{row.feature}</span>
+                  </div>
+                  
+                  <div className={styles.colOnline}>
+                    {typeof row.online === 'number' ? (
+                      <StarRating count={row.online} />
+                    ) : (
+                      <div className={styles.boolValue}>
+                        {row.online === 'No' ? (
+                          <span className={styles.noTravel}><Check size={18} /> No</span>
+                        ) : (
+                          row.online
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className={styles.colOffline}>
+                    {typeof row.offline === 'number' ? (
+                      <div className={styles.fadedStars}>
+                        <StarRating count={row.offline} />
+                      </div>
+                    ) : (
+                      <div className={styles.boolValueOffline}>
+                        {row.offline === 'Yes' ? (
+                          <span className={styles.yesTravel}><X size={18} /> Yes</span>
+                        ) : (
+                          row.offline
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+            
+          </div>
         </div>
 
         <div className={styles.bottomLine}>
-          <div className={styles.bottomLineInner}>
-            <h3>Learn Better. Practice Smarter. Progress Faster.</h3>
-            <p>
-              A structured online chess program that combines expert coaching, technology, assessment, and continuous feedback—all from wherever your child is.
-            </p>
+          <h3 className={styles.bottomTitle}>Learn Better. Practice Smarter. Progress Faster.</h3>
+          <p className={styles.bottomText}>
+            A structured online chess program that combines expert coaching, technology, assessment, and continuous feedback—all from wherever your child is.
+          </p>
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <Link to="/book-trial" className="btn btn-gold btn-lg">
+              Book a Free Trial
+            </Link>
           </div>
         </div>
       </div>

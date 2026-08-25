@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper/modules'
+import { Link } from 'react-router-dom'
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { testimonials } from '../../../../data/testimonials'
 import styles from './Testimonials.module.css'
@@ -78,6 +79,12 @@ export default function Testimonials() {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
+
+        <div style={{ marginTop: '3rem', textAlign: 'center', position: 'relative', zIndex: 10 }}>
+          <Link to="/book-trial" className="btn btn-gold btn-lg">
+            Join These Happy Parents - Book a Trial
+          </Link>
         </div>
       </div>
     </section>

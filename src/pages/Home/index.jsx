@@ -1,6 +1,7 @@
 import Hero from './sections/Hero/Hero'
-import IntroVideo from './sections/IntroVideo/IntroVideo'
+import ResearchBenefits from './sections/ResearchBenefits/ResearchBenefits'
 import WhyBetter from './sections/WhyBetter/WhyBetter'
+import OnlineVsOffline from './sections/OnlineVsOffline/OnlineVsOffline'
 import KidsZone from './sections/KidsZone/KidsZone'
 import Programs from './sections/Programs/Programs'
 import Coaches from './sections/Coaches/Coaches'
@@ -9,7 +10,6 @@ import GoogleReviews from './sections/GoogleReviews/GoogleReviews'
 import Gallery from './sections/Gallery/Gallery'
 import LifeAtSkillgenc from './sections/LifeAtSkillgenc/LifeAtSkillgenc'
 import Achievements from './sections/Achievements/Achievements'
-import OnlineVsOffline from './sections/OnlineVsOffline/OnlineVsOffline'
 import FAQ from './sections/FAQ/FAQ'
 import { Helmet } from 'react-helmet-async'
 
@@ -21,14 +21,14 @@ export default function Home() {
         <meta name="description" content="Skillgenc offers expert chess coaching, structured programs for all levels, and comprehensive tournaments. Join our academy today!" />
       </Helmet>
       <Hero />
-      <IntroVideo />
+      <ResearchBenefits />
       <WhyBetter />
+      <OnlineVsOffline />
       <KidsZone />
       <Programs />
       <Coaches />
       <Testimonials />
       <GoogleReviews />
-      <OnlineVsOffline />
       <Gallery />
       <LifeAtSkillgenc />
       <Achievements />
@@ -36,3 +36,4 @@ export default function Home() {
     </div>
   )
 }
+

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Plus, Minus } from 'lucide-react'
 import { faqs } from '../../../../data/faqs'
 import styles from './FAQ.module.css'
@@ -36,7 +37,7 @@ function AccordionItem({ item, isOpen, onClick }) {
 }
 
 export default function FAQ() {
-  const [openId, setOpenId] = useState(faqs[0].id)
+  const [openId, setOpenId] = useState(null)
 
   return (
     <section className={`section ${styles.section}`}>
@@ -61,6 +62,13 @@ export default function FAQ() {
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
               />
             ))}
+          </div>
+
+          <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: '#fff' }}>Ready to start your child's chess journey?</h3>
+            <Link to="/book-trial" className="btn btn-gold btn-lg">
+              Book Your Free Trial Today
+            </Link>
           </div>
         </div>
     </section>

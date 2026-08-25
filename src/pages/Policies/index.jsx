@@ -4,7 +4,7 @@ import styles from './Policies.module.css'
 
 const RefundPolicy = () => (
   <>
-    <p><strong>Last Updated: [Date]</strong></p>
+    <p><strong>Last Updated: August 25, 2026</strong></p>
     <p>At Skillgenc, we want every parent to feel confident before committing to a learning program. That's why we offer a simple 7-Day, No-Questions-Asked Refund Policy.</p>
     
     <h3>1. 7-Day Refund</h3>
@@ -59,8 +59,8 @@ const RefundPolicy = () => (
     <h3>9. Contact Us</h3>
     <p>For refund-related questions or requests:</p>
     <ul>
-      <li>Email: [support@skillgenc.com]</li>
-      <li>Phone/WhatsApp: [Phone Number]</li>
+      <li>Email: admin@skillgenc.com, skillgenc@gmail.com</li>
+      <li>Phone/WhatsApp: +91 9008568002, +91 8074555644</li>
     </ul>
     <p>Our promise is simple: try Skillgenc with confidence. If you decide within 7 days that it's not the right fit, we'll refund your payment — no questions asked.</p>
   </>
@@ -68,7 +68,7 @@ const RefundPolicy = () => (
 
 const PrivacyPolicy = () => (
   <>
-    <p><strong>Last Updated: [Date]</strong></p>
+    <p><strong>Last Updated: August 25, 2026</strong></p>
     <p>At Skillgenc, we respect your privacy and are committed to protecting the personal information shared with us by parents, students and visitors to our website.</p>
     <p>This Privacy Policy explains what information we collect, why we collect it and how we use and protect it.</p>
     
@@ -177,16 +177,16 @@ const PrivacyPolicy = () => (
     <h3>12. Contact Us</h3>
     <p>If you have questions, concerns or requests regarding this Privacy Policy, please contact us:</p>
     <ul>
-      <li>Email: [privacy@skillgenc.com]</li>
-      <li>Phone/WhatsApp: [Phone Number]</li>
-      <li>Address: [Registered Business Address]</li>
+      <li>Email: admin@skillgenc.com, skillgenc@gmail.com</li>
+      <li>Phone/WhatsApp: +91 9008568002, +91 8074555644</li>
+      <li>Address: 16th Main Rd, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru, Karnataka 560041</li>
     </ul>
   </>
 );
 
 const TermsOfService = () => (
   <>
-    <p><strong>Last Updated: [Date]</strong></p>
+    <p><strong>Last Updated: August 25, 2026</strong></p>
     <p>Welcome to Skillgenc.</p>
     <p>These Terms of Service explain the terms that apply when you use the Skillgenc website, enroll in our programs, attend classes or use our learning services.</p>
     <p>By purchasing or using Skillgenc services, you agree to these Terms.</p>
@@ -337,9 +337,9 @@ const TermsOfService = () => (
     <h3>20. Contact Us</h3>
     <p>If you have questions regarding these Terms, please contact us:</p>
     <ul>
-      <li>Email: [support@skillgenc.com]</li>
-      <li>Phone/WhatsApp: [Phone Number]</li>
-      <li>Address: [Registered Business Address]</li>
+      <li>Email: admin@skillgenc.com, skillgenc@gmail.com</li>
+      <li>Phone/WhatsApp: +91 9008568002, +91 8074555644</li>
+      <li>Address: 16th Main Rd, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bengaluru, Karnataka 560041</li>
     </ul>
   </>
 );

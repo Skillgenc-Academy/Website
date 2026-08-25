@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './WhyBetter.module.css'
 
 const features = [
@@ -79,6 +80,12 @@ export default function WhyBetter() {
               <div className={styles.cardLine} style={{ '--accent': f.accent }} />
             </div>
           ))}
+        </div>
+
+        <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+          <Link to="/book-trial" className="btn btn-gold btn-lg">
+            Experience the Difference - Book a Trial
+          </Link>
         </div>
       </div>
     </section>

@@ -397,7 +397,7 @@
 
 /* ─── 08 CTA ─────────────────────────────────────────────── */
 .ctaSection {
-  background: #000000;
+  background: #ffffff;
   padding: 100px 0;
   text-align: center;
 }
@@ -411,14 +411,14 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .ctaSub {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.7;
   margin-bottom: 40px;
 }
@@ -495,5 +495,15 @@
     text-align: center;
     border-left: 1px solid rgba(1, 83, 217, 0.15);
     border-top: 4px solid #0153D9;
+  }
+}
+
+@media (max-width: 576px) {
+  .impactGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impactNum {
+    font-size: 2.2rem;
   }
 }

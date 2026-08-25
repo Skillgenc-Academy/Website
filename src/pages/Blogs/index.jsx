@@ -65,6 +65,14 @@ export default function Blogs() {
               No articles found in this category yet.
             </div>
           )}
+
+          <div style={{ marginTop: '5rem', textAlign: 'center' }}>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Ready to Improve Your Game?</h2>
+            <p style={{ color: 'var(--black)', opacity: 0.7, marginBottom: '2rem' }}>Apply these strategies in real games with our expert coaches.</p>
+            <Link to="/book-trial" className="btn btn-primary btn-lg">
+              Book a Free Trial Class
+            </Link>
+          </div>
         </div>
       </section>
     </div>

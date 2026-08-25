@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Target, Eye, Brain, Award, Globe, MapPin, TrendingUp } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import styles from './About.module.css'
+import worldMapImage from '../../assets/world-map.jpg'
 
 export default function About() {
   return (
@@ -119,6 +120,21 @@ export default function About() {
         </div>
       </section>
 
+      {/* Middle CTA Block */}
+      <section className="section" style={{ background: '#fff' }}>
+        <div className="container">
+          <div style={{ padding: '3rem 2rem', background: 'var(--blue-10)', border: '1px solid var(--blue-20)', borderRadius: '24px', textAlign: 'center' }}>
+            <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--black)' }}>Experience Our Approach Firsthand</h3>
+            <p style={{ opacity: 0.8, marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+              See how our structured, personalised methodology helps children build genuine understanding and confidence.
+            </p>
+            <Link to="/book-trial" className="btn btn-primary btn-lg">
+              Book a Free Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 04 — Our Reach */}
       <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
@@ -136,7 +152,7 @@ export default function About() {
             <div className={styles.reachMap}>
               <div className={styles.mapVisual}>
                 <img 
-                  src="/world-map.png" 
+                  src={worldMapImage} 
                   alt="Students across multiple countries"
                   className={styles.mapImage}
                   onError={(e) => {
@@ -278,7 +294,7 @@ export default function About() {
               <Link to="/book-trial" className="btn btn-primary btn-lg">
                 Book a Free Demo <ArrowRight size={18} />
               </Link>
-              <Link to="/programs" className="btn btn-outline-white btn-lg">
+              <Link to="/#programs" className="btn btn-outline btn-lg">
                 Explore Programs
               </Link>
             </div>

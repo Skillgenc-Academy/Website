@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, Send } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import PhoneInputLib from 'react-phone-input-2'
@@ -182,6 +183,13 @@ export default function Contact() {
                     <p>2nd floor, Jewel Square mall, Koregaon Rd, near hotel taj vivanta, Koregaon Park, Pune, Maharashtra 411001</p>
                   </div>
                 </div>
+              </div>
+
+              <div style={{ marginTop: '3rem', padding: '2rem', background: 'var(--blue-10)', borderRadius: '16px', textAlign: 'center' }}>
+                <h4 style={{ marginBottom: '1rem', fontSize: '1.2rem' }}>Looking to Start Learning?</h4>
+                <Link to="/book-trial" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                  Book a Free Trial
+                </Link>
               </div>
             </div>
 
