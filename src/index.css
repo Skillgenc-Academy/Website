@@ -427,3 +427,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5px !important;
   margin-bottom: 5px !important;
 }
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (hover: hover) {
+  .btn-outline-white:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+}
+

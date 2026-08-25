@@ -135,8 +135,22 @@ export default function About() {
             </div>
             <div className={styles.reachMap}>
               <div className={styles.mapVisual}>
-                <Globe size={64} className={styles.globeIcon} />
-                <p className={styles.mapLabel}>Students across multiple countries</p>
+                <img 
+                  src="/world-map.png" 
+                  alt="Students across multiple countries"
+                  className={styles.mapImage}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className={styles.mapFallback} style={{ display: 'none' }}>
+                  <Globe size={64} className={styles.globeIcon} />
+                  <p className={styles.mapLabel}>Upload /world-map.png</p>
+                </div>
+                <div className={styles.mapOverlay}>
+                  <p>Students across multiple countries</p>
+                </div>
               </div>
             </div>
           </div>
@@ -261,10 +275,10 @@ export default function About() {
               Give your child the opportunity to learn, think and grow through chess.
             </p>
             <div className={styles.ctaButtons}>
-              <Link to="/book-trial" className="btn-primary">
+              <Link to="/book-trial" className="btn btn-primary btn-lg">
                 Book a Free Demo <ArrowRight size={18} />
               </Link>
-              <Link to="/programs" className="btn-secondary">
+              <Link to="/programs" className="btn btn-outline-white btn-lg">
                 Explore Programs
               </Link>
             </div>
