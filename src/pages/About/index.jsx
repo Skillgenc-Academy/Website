@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Eye, Award, Brain } from 'lucide-react'
+import { ArrowRight, Target, Eye, Brain, Award, Globe, MapPin, TrendingUp } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import styles from './About.module.css'
 
@@ -11,90 +11,70 @@ export default function About() {
         <meta name="description" content="Our mission is to make meaningful chess education accessible, engaging and transformative for every learner." />
       </Helmet>
 
-      {/* Hero / Mission */}
-      <section className={styles.hero}>
+      {/* 01 — Our Mission */}
+      <section className={styles.missionSection}>
         <div className="container">
-          <div className={styles.heroGrid}>
-            <div className={styles.heroContent}>
-              <div className="section-tag">♟ Our Mission</div>
-              <h1 className="hero-title" style={{ marginTop: '16px', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-                Making Chess <span className="gradient-text">Education</span> <br />
-                Accessible &amp; <span className="gradient-text">Transformative</span>
-              </h1>
-              <p className="section-subtitle" style={{ margin: '20px 0 16px' }}>
-                Our mission is to make meaningful chess education accessible, engaging and transformative for every learner.
-              </p>
-              <p className="section-subtitle" style={{ margin: '0 0 32px', opacity: 0.75 }}>
-                We believe chess is more than a game. It is a powerful way to develop focus, strategic thinking, problem-solving, patience and confidence — skills that extend far beyond the chessboard.
-              </p>
-              <div className={styles.statsRow}>
-                <div>
-                  <h4>5,000+</h4>
-                  <p>Learners</p>
-                </div>
-                <div className={styles.statLine} />
-                <div>
-                  <h4>10+</h4>
-                  <p>Countries</p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.heroImage}>
-              <img src="/placeholder-about.jpg" alt="Students playing chess" className={styles.imagePlaceholder} />
-            </div>
+          <div className={styles.missionInner}>
+            <div className="section-tag" style={{ color: '#F9D024' }}>♟ Our Mission</div>
+            <h1 className={styles.missionHeading}>
+              Our mission is to make meaningful chess education{' '}
+              <span className={styles.missionAccent}>accessible, engaging</span>{' '}
+              and transformative for every learner.
+            </h1>
+            <p className={styles.missionSub}>
+              We believe chess is more than a game. It is a powerful way to develop focus, strategic thinking,
+              problem-solving, patience and confidence — skills that extend far beyond the chessboard.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* What We Believe */}
+      {/* 02 — What We Believe */}
       <section className="section" style={{ background: '#0153D9' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 className="section-title" style={{ color: '#ffffff' }}>What We <span style={{ color: '#F9D024' }}>Believe</span></h2>
+            <div className="section-tag" style={{ color: 'rgba(255,255,255,0.6)' }}>♟ Philosophy</div>
+            <h2 className="section-title" style={{ color: '#ffffff', marginTop: '12px' }}>
+              What We <span style={{ color: '#F9D024' }}>Believe</span>
+            </h2>
           </div>
-          <div className={styles.grid}>
+          <div className={styles.grid4}>
             <div className={styles.card}>
               <div className={styles.iconWrap}><Target size={28} /></div>
               <h3>Chess is a Way of Thinking</h3>
-              <p>
-                We see chess as a powerful tool for developing thoughtful decision-making and strategic thinking.
-              </p>
+              <p>We see chess as a powerful tool for developing thoughtful decision-making and strategic thinking.</p>
             </div>
             <div className={styles.card}>
-              <div className={styles.iconWrap}><Eye size={28} /></div>
+              <div className={styles.iconWrap}><TrendingUp size={28} /></div>
               <h3>Every Learner Can Grow</h3>
-              <p>
-                With the right guidance, practice and environment, every student can develop their abilities at their own pace.
-              </p>
+              <p>With the right guidance, practice and environment, every student can develop their abilities at their own pace.</p>
             </div>
             <div className={styles.card}>
               <div className={styles.iconWrap}><Brain size={28} /></div>
               <h3>Learning Should Be Engaging</h3>
-              <p>
-                Children learn best when they are curious, challenged and enjoying the process.
-              </p>
+              <p>Children learn best when they are curious, challenged and enjoying the process.</p>
             </div>
             <div className={styles.card}>
               <div className={styles.iconWrap}><Award size={28} /></div>
               <h3>The Lessons Go Beyond the Board</h3>
-              <p>
-                The habits developed through chess — focus, patience, discipline and resilience — can influence how children approach challenges in everyday life.
-              </p>
+              <p>The habits developed through chess — focus, patience, discipline and resilience — can influence how children approach challenges in everyday life.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="section" style={{ background: '#f8f9fc', color: '#000' }}>
+      {/* 03 — Our Approach */}
+      <section className="section" style={{ background: '#f8f9fc' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2 className="section-title" style={{ color: '#000' }}>Our <span className="gradient-text">Approach</span></h2>
+            <div className="section-tag">♟ How We Teach</div>
+            <h2 className="section-title" style={{ color: '#000', marginTop: '12px' }}>
+              Our <span className="gradient-text">Approach</span>
+            </h2>
             <p className="section-subtitle" style={{ color: 'rgba(0,0,0,0.6)', margin: '16px auto 0' }}>
-              How we put our beliefs into practice, one learner at a time.
+              How we put our beliefs into practice — one learner at a time.
             </p>
           </div>
-
           <div className={styles.journeyCreative}>
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>01</div>
@@ -103,9 +83,7 @@ export default function About() {
                 <p>A progressive learning journey designed around the learner's level and development.</p>
               </div>
             </div>
-
             <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
-
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>02</div>
               <div className={styles.journeyContent}>
@@ -113,9 +91,7 @@ export default function About() {
                 <p>Learning that recognises individual strengths, challenges and pace.</p>
               </div>
             </div>
-
             <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
-
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>03</div>
               <div className={styles.journeyContent}>
@@ -123,9 +99,7 @@ export default function About() {
                 <p>Making chess engaging while building genuine understanding.</p>
               </div>
             </div>
-
             <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
-
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>04</div>
               <div className={styles.journeyContent}>
@@ -133,9 +107,7 @@ export default function About() {
                 <p>Going beyond moves and openings to develop thinking, decision-making and confidence.</p>
               </div>
             </div>
-
             <div className={styles.journeyArrow}><ArrowRight size={24} /></div>
-
             <div className={styles.journeyCard}>
               <div className={styles.stepNum}>05</div>
               <div className={styles.journeyContent}>
@@ -146,6 +118,160 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* 04 — Our Reach */}
+      <section className="section" style={{ background: '#050a18' }}>
+        <div className="container">
+          <div className={styles.reachInner}>
+            <div className={styles.reachText}>
+              <div className="section-tag" style={{ color: 'rgba(255,255,255,0.5)' }}>♟ Global Presence</div>
+              <h2 className={styles.reachHeading}>
+                From Bengaluru <span style={{ color: '#F9D024' }}>to the World</span>
+              </h2>
+              <p className={styles.reachSub}>
+                From our communities in India to learners around the world, Skillgenc is helping children
+                discover chess, develop their thinking and grow through the game.
+              </p>
+            </div>
+            <div className={styles.reachMap}>
+              <div className={styles.mapVisual}>
+                <Globe size={64} className={styles.globeIcon} />
+                <p className={styles.mapLabel}>Students across multiple countries</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.reachStats}>
+            <div className={styles.reachStat}>
+              <span className={styles.reachNum}>10+</span>
+              <span className={styles.reachLabel}>Countries</span>
+            </div>
+            <div className={styles.reachStatLine} />
+            <div className={styles.reachStat}>
+              <span className={styles.reachNum}>5,000+</span>
+              <span className={styles.reachLabel}>Students</span>
+            </div>
+            <div className={styles.reachStatLine} />
+            <div className={styles.reachStat}>
+              <span className={styles.reachNum}>20+</span>
+              <span className={styles.reachLabel}>Communities</span>
+            </div>
+            <div className={styles.reachStatLine} />
+            <div className={styles.reachStat}>
+              <span className={styles.reachNum}>15+</span>
+              <span className={styles.reachLabel}>Preschools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 05 — Our Presence in India */}
+      <section className="section" style={{ background: '#ffffff' }}>
+        <div className="container">
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <div className="section-tag">♟ On the Ground</div>
+            <h2 className="section-title" style={{ color: '#000', marginTop: '12px' }}>
+              Growing Through <span className="gradient-text">Communities</span>
+            </h2>
+            <p className="section-subtitle" style={{ color: 'rgba(0,0,0,0.6)', margin: '16px auto 0', maxWidth: '600px' }}>
+              Our chess programs are part of learning communities across India, with partnerships spanning
+              gated communities, preschools and other learning environments.
+            </p>
+          </div>
+          <div className={styles.locationsGrid}>
+            <div className={styles.locationCard}>
+              <div className={styles.locationIcon}><MapPin size={28} /></div>
+              <h3>Bengaluru</h3>
+              <p>Gated communities • Preschools</p>
+            </div>
+            <div className={styles.locationCard}>
+              <div className={styles.locationIcon}><MapPin size={28} /></div>
+              <h3>Hyderabad</h3>
+              <p>Gated communities • Preschools</p>
+            </div>
+            <div className={styles.locationCard}>
+              <div className={styles.locationIcon}><MapPin size={28} /></div>
+              <h3>Pune</h3>
+              <p>Gated communities • Preschools</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 06 — Our Impact */}
+      <section className="section" style={{ background: '#0153D9' }}>
+        <div className="container">
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <div className="section-tag" style={{ color: 'rgba(255,255,255,0.6)' }}>♟ Our Impact</div>
+            <h2 className="section-title" style={{ color: '#ffffff', marginTop: '12px' }}>
+              Making Every <span style={{ color: '#F9D024' }}>Move Count</span>
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.75)', maxWidth: '560px', margin: '16px auto 0', lineHeight: 1.7 }}>
+              Every student journey is different. What remains constant is our focus on helping learners
+              build stronger chess skills, sharper thinking and greater confidence.
+            </p>
+          </div>
+          <div className={styles.impactGrid}>
+            <div className={styles.impactStat}>
+              <span className={styles.impactNum}>5,000+</span>
+              <span className={styles.impactLabel}>Learners</span>
+            </div>
+            <div className={styles.impactStat}>
+              <span className={styles.impactNum}>10+</span>
+              <span className={styles.impactLabel}>Countries</span>
+            </div>
+            <div className={styles.impactStat}>
+              <span className={styles.impactNum}>20+</span>
+              <span className={styles.impactLabel}>Community Partnerships</span>
+            </div>
+            <div className={styles.impactStat}>
+              <span className={styles.impactNum}>15+</span>
+              <span className={styles.impactLabel}>Preschools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 07 — Our Vision */}
+      <section className={styles.visionSection}>
+        <div className="container">
+          <div className={styles.visionInner}>
+            <div className="section-tag">♟ Our Vision</div>
+            <h2 className={styles.visionHeading}>
+              We envision a world where chess becomes a{' '}
+              <span className="gradient-text">meaningful part</span>{' '}
+              of every child's learning journey.
+            </h2>
+            <p className={styles.visionSub}>
+              A world where children don't just learn how to play the game, but learn how to think,
+              decide, adapt and grow through it.
+            </p>
+            <p className={styles.visionStatement}>
+              We are building towards a future where every move creates a better thinker.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 08 — CTA */}
+      <section className={styles.ctaSection}>
+        <div className="container">
+          <div className={styles.ctaInner}>
+            <h2 className={styles.ctaHeading}>Every Journey Begins With a Move.</h2>
+            <p className={styles.ctaSub}>
+              Give your child the opportunity to learn, think and grow through chess.
+            </p>
+            <div className={styles.ctaButtons}>
+              <Link to="/book-trial" className="btn-primary">
+                Book a Free Demo <ArrowRight size={18} />
+              </Link>
+              <Link to="/programs" className="btn-secondary">
+                Explore Programs
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
