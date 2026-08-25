@@ -26,6 +26,11 @@ export default function About() {
               We believe chess is more than a game. It is a powerful way to develop focus, strategic thinking,
               problem-solving, patience and confidence — skills that extend far beyond the chessboard.
             </p>
+            <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <Link to="/book-trial" className="btn btn-primary btn-lg">
+                Start Their Journey
+              </Link>
+            </div>
           </div>
         </div>
       </section>

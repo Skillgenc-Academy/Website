@@ -21,6 +21,11 @@ export default function Platform() {
           <p className={styles['section-subtitle']} style={{ margin: '16px auto 0' }}>
             From learning concepts to playing real games, practising puzzles to tracking progress — every part of the chess journey is supported by a powerful, purpose-built digital environment.
           </p>
+          <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <Link to="/book-trial" className="btn btn-primary btn-lg">
+              Book a Free Trial
+            </Link>
+          </div>
         </div>
       </section>
 
