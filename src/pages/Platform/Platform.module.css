@@ -198,25 +198,34 @@
   border-right: 1px solid rgba(0,0,0,0.05);
 }
 
-.featureImage {
+.visualStack {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.featureImage {
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
 }
 
 .placeholderImage {
   width: 100%;
-  height: 100%;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: rgba(1, 61, 150, 0.4);
   background: repeating-linear-gradient(45deg, rgba(1,83,217,0.02) 0, rgba(1,83,217,0.02) 10px, transparent 10px, transparent 20px);
-  padding: 40px;
+  margin: 40px 40px 0 40px;
+  border-radius: 12px;
   text-align: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .placeholderImage span {
@@ -224,6 +233,79 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+/* Screenshot Callouts */
+.calloutSection {
+  padding: 24px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.calloutCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.calloutCard {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.calloutNum {
+  background: #F9D024;
+  color: #013D96;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.featureRow.alt .calloutNum {
+  background: #0153D9;
+  color: #ffffff;
+}
+
+.calloutText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calloutText strong {
+  color: #013D96;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.calloutText span {
+  color: #4a5568;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.calloutSummary {
+  text-align: center;
+  color: #013D96;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  font-style: italic;
 }
 
 .reverse {
@@ -423,6 +505,19 @@
   
   .flowRow span {
     text-align: center;
+  }
+
+  .calloutCards {
+    grid-template-columns: 1fr;
+  }
+
+  .calloutSection {
+    padding: 20px 24px 24px 24px;
+  }
+
+  .placeholderImage {
+    margin: 24px 24px 0 24px;
+    height: 180px;
   }
 
   .progressPointers .featureList {

@@ -51,10 +51,46 @@ export default function Platform() {
                   <li><Target size={18} /> Apply concepts during the lesson</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Interactive board<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Interactive board<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Interactive Board</strong>
+                          <span>Try moves and explore concepts live.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Coach Controls</strong>
+                          <span>Teachers guide the position in real-time.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>Live Arrows</strong>
+                          <span>Visualise threats and ideas easily.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Hands-on</strong>
+                          <span>Direct interaction on the board.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Active participation, not just passive watching.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,10 +113,46 @@ export default function Platform() {
                   <li><Target size={18} /> Visualise positions clearly</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Position analysis<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Position analysis<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Variations Tree</strong>
+                          <span>See every branching possibility.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Engine Evaluation</strong>
+                          <span>Understand if a move is good or bad.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>Position Editor</strong>
+                          <span>Set up specific scenarios instantly.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Highlights</strong>
+                          <span>Key squares and paths illuminated.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Break down complex positions into clear concepts.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,10 +176,46 @@ export default function Platform() {
                   <li><Target size={18} /> Consistent practice</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Puzzle<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Puzzle<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Tactical Puzzles</strong>
+                          <span>Solve game-like scenarios.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Puzzle Rating</strong>
+                          <span>Adjusts to the student's exact skill level.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>History Tracking</strong>
+                          <span>See improvement over time.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Pattern Drill</strong>
+                          <span>Repeat key themes until mastered.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Sharpen skills with adaptive challenges.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,10 +239,46 @@ export default function Platform() {
                   <li><Target size={18} /> Learn through every game</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Live game<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Live game<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Live Clock</strong>
+                          <span>Learn time management under pressure.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Opponent Matching</strong>
+                          <span>Play against peers of similar strength.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>Move Input</strong>
+                          <span>Practice precise board control.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Game Log</strong>
+                          <span>Record of every move played.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Apply lessons in a real competitive environment.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -169,10 +313,46 @@ export default function Platform() {
                   <li><Target size={18} /> Discover stronger ideas</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Analysis board<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Analysis board<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Move History</strong>
+                          <span>Review the game move by move.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Position Evaluation</strong>
+                          <span>Understand how the position changes.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>Variations</strong>
+                          <span>Explore alternative possibilities.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Game Review</strong>
+                          <span>Identify important moments.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Understand the game beyond the result.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -196,10 +376,46 @@ export default function Platform() {
                   <li><Target size={18} /> Tournament results</li>
                 </ul>
               </div>
+              
               <div className={styles.featureVisual}>
-                <div className={styles.placeholderImage}>
-                  <ImageIcon size={48} />
-                  <span>Tournament<br/>(Image coming soon)</span>
+                <div className={styles.visualStack}>
+                  <div className={styles.placeholderImage}>
+                    <ImageIcon size={48} />
+                    <span>Tournament<br/>(Image coming soon)</span>
+                  </div>
+                  <div className={styles.calloutSection}>
+                    <div className={styles.calloutCards}>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>1</div>
+                        <div className={styles.calloutText}>
+                          <strong>Tournament Standings</strong>
+                          <span>See live rankings and scores.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>2</div>
+                        <div className={styles.calloutText}>
+                          <strong>Pairing System</strong>
+                          <span>Automatic match-ups each round.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>3</div>
+                        <div className={styles.calloutText}>
+                          <strong>Live Spectating</strong>
+                          <span>Watch other students' games unfold.</span>
+                        </div>
+                      </div>
+                      <div className={styles.calloutCard}>
+                        <div className={styles.calloutNum}>4</div>
+                        <div className={styles.calloutText}>
+                          <strong>Leaderboard</strong>
+                          <span>Track points and progress.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles.calloutSummary}>Experience the thrill of real competition.</div>
+                  </div>
                 </div>
               </div>
             </div>
