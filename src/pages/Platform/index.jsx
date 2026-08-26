@@ -54,10 +54,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Interactive board<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/learn.png" alt="Interactive board" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -116,10 +113,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Position analysis<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/understand.png" alt="Position analysis" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -179,10 +173,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Puzzle<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/practice.png" alt="Puzzle" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -242,10 +233,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Live game<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/play.png" alt="Live game" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -316,10 +304,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Analysis board<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/analyse.png" alt="Analysis board" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -379,10 +364,7 @@ export default function Platform() {
               
               <div className={styles.featureVisual}>
                 <div className={styles.visualStack}>
-                  <div className={styles.placeholderImage}>
-                    <ImageIcon size={48} />
-                    <span>Tournament<br/>(Image coming soon)</span>
-                  </div>
+                  <img src="/compete.png" alt="Tournament" className={styles.featureImage} />
                   <div className={styles.calloutSection}>
                     <div className={styles.calloutCards}>
                       <div className={styles.calloutCard}>
@@ -440,7 +422,7 @@ export default function Platform() {
                 </ul>
               </div>
               <div className={styles.featureVisual}>
-                <img src={trackImage} alt="Track progress" className={styles.featureImage} />
+                <img src="/track.png" alt="Track progress" className={styles.featureImage} />
               </div>
             </div>
 
