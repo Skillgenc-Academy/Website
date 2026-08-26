@@ -29,7 +29,12 @@ function AccordionItem({ item, isOpen, onClick }) {
         style={{ height }}
       >
         <div ref={contentRef} className={styles.content}>
-          {item.answer}
+          {item.answer.split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              <br />
+            </span>
+          ))}
         </div>
       </div>
     </div>

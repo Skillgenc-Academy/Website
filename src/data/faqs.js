@@ -15,7 +15,7 @@ export const faqs = [
     id: 3,
     question: "How do I know if my child is actually improving?",
     answer:
-      "Progress isn't only about winning games. At Skillgenc, we use our structured assessment program to evaluate a child's development at different stages of their learning journey. The assessment looks at areas such as chess understanding, tactical awareness, decision-making, game planning and practical gameplay. This helps us identify the child's strengths, areas for improvement and the next steps in their learning journey.",
+      "Progress isn't only about winning games. At Skillgenc, we use our structured assessment program to evaluate a child's development at different stages of their learning journey. The assessment looks at areas such as chess understanding, tactical awareness, decision-making, game planning and practical gameplay.\n\nThis helps us identify the child's strengths, areas for improvement and the next steps in their learning journey.",
   },
   {
     id: 4,
@@ -27,7 +27,7 @@ export const faqs = [
     id: 5,
     question: "What happens after my child completes a package?",
     answer:
-      "Completing a package is also an opportunity to assess and recognise your child's progress. At the end of the learning cycle, students can undergo an assessment to evaluate their development against the skills covered at their current level. Students who successfully complete the level receive a Level Completion Certificate and are guided towards the next level of learning. They can then continue their journey with the next appropriate package or explore 1-on-1 learning if it better suits their goals.",
+      "Completing a package is also an opportunity to assess and recognise your child's progress. At the end of the learning cycle, students can undergo an assessment to evaluate their development against the skills covered at their current level.\n\nStudents who successfully complete the level receive a Level Completion Certificate and are guided towards the next level of learning. They can then continue their journey with the next appropriate package or explore 1-on-1 learning if it better suits their goals.",
   },
   {
     id: 6,
@@ -51,12 +51,12 @@ export const faqs = [
     id: 9,
     question: "What if my child loses interest in chess after joining?",
     answer:
-      "We believe learning should be engaging, challenging and enjoyable. Our classes use interactive activities, practical games and problem-solving to keep students involved in the learning process. If your child's learning needs or interests change, our team can also help determine whether a different learning format or approach would be more suitable.",
+      "We believe learning should be engaging, challenging and enjoyable. Our classes use interactive activities, practical games and problem-solving to keep students involved in the learning process.\n\nIf your child's learning needs or interests change, our team can also help determine whether a different learning format or approach would be more suitable.",
   },
   {
     id: 10,
     question: "How do I know which package or learning format is right for my child?",
     answer:
-      "You don't have to decide based only on the information on the website. Start with a demo session, where we can understand your child's current chess level, learning needs and goals. Based on the demo, our team can recommend the most suitable learning format and package for your child.",
+      "You don't have to decide based only on the information on the website. Start with a demo session, where we can understand your child's current chess level, learning needs and goals.\n\nBased on the demo, our team can recommend the most suitable learning format and package for your child.",
   },
 ];
