@@ -96,7 +96,8 @@
 }
 
 .navLink.active {
-  color: #F9D024;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 /* CTA area */
