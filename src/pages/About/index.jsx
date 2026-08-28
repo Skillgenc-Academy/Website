@@ -3,6 +3,7 @@ import { ArrowRight, Target, Eye, Brain, Award, Globe, MapPin, TrendingUp } from
 import { Helmet } from 'react-helmet-async'
 import styles from './About.module.css'
 import worldMapImage from '../../assets/world-map.jpg'
+import MapInfographic from './MapInfographic'
 
 export default function About() {
   return (
@@ -155,24 +156,7 @@ export default function About() {
               </p>
             </div>
             <div className={styles.reachMap}>
-              <div className={styles.mapVisual}>
-                <img 
-                  src={worldMapImage} 
-                  alt="Students across multiple countries"
-                  className={styles.mapImage}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className={styles.mapFallback} style={{ display: 'none' }}>
-                  <Globe size={64} className={styles.globeIcon} />
-                  <p className={styles.mapLabel}>Upload /world-map.png</p>
-                </div>
-                <div className={styles.mapOverlay}>
-                  <p>Students across multiple countries</p>
-                </div>
-              </div>
+              <MapInfographic />
             </div>
           </div>
           <div className={styles.reachStats}>

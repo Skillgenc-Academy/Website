@@ -2,7 +2,6 @@ import Hero from './sections/Hero/Hero'
 import ResearchBenefits from './sections/ResearchBenefits/ResearchBenefits'
 import WhyBetter from './sections/WhyBetter/WhyBetter'
 import OnlineVsOffline from './sections/OnlineVsOffline/OnlineVsOffline'
-import KidsZone from './sections/KidsZone/KidsZone'
 import Programs from './sections/Programs/Programs'
 import Coaches from './sections/Coaches/Coaches'
 import Testimonials from './sections/Testimonials/Testimonials'
@@ -24,7 +23,6 @@ export default function Home() {
       <ResearchBenefits />
       <WhyBetter />
       <OnlineVsOffline />
-      <KidsZone />
       <Programs />
       <Coaches />
       <Testimonials />

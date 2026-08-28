@@ -1,14 +1,14 @@
 .section {
   background: #ffffff;
   padding: 80px 0;
-  overflow: hidden;
+  overflow: visible; /* Need visible for sticky to work relative to page */
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: center; 
 }
 
 /* Left Column */
@@ -17,58 +17,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #333333;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.titleUnderline {
-  width: 150px;
-  height: 4px;
-  background-color: #ff9f43; /* subtle orange/yellow from screenshot */
-  margin: 0 auto 20px;
-  border-radius: 2px;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #555555;
-  margin-bottom: 40px;
-  font-weight: 500;
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  justify-content: center;
 }
 
 .brainImage {
   width: 100%;
+  max-width: 450px;
   height: auto;
   object-fit: contain;
 }
 
-/* Right Column */
+/* Right Column - Scrolling List */
 .rightCol {
-  position: relative;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow-y: auto;
+  padding: 50px 20px; 
+  scrollbar-width: none; /* Hide for Firefox */
+  -ms-overflow-style: none; /* Hide for IE/Edge */
+}
+
+.rightCol::-webkit-scrollbar {
+  display: none; /* Hide for Chrome, Safari, and Opera */
+}
+
+.cardContainer {
+  position: sticky;
+  top: 50px;
+  height: 500px;
+  margin-bottom: 400px; 
+  width: 100%;
+}
+
+.cardContainer:last-child {
+  margin-bottom: 0;
 }
 
 /* Pink backdrop behind the card */
 .cardBackdrop {
   position: absolute;
   top: 0;
-  left: 20px;
-  right: -20px;
-  bottom: -20px;
-  background-color: #ff9ff3; /* Pink background */
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  background-color: #ff9ff3;
   border-radius: 20px;
   z-index: 0;
 }
@@ -76,21 +69,31 @@
 /* Main Teal Card */
 .card {
   position: relative;
-  background-color: #00cec9; /* Teal */
+  height: 100%;
+  background-color: #00cec9;
   border-radius: 16px;
-  padding: 50px 40px;
+  padding: 40px;
   color: #ffffff;
   z-index: 1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.card::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 .cardTitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 20px;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .cardDivider {
@@ -107,30 +110,64 @@
 }
 
 .cardContent p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 500;
   margin: 0;
 }
 
+.imageCard {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 40px;
   }
 
-  .cardBackdrop {
-    left: 10px;
-    right: -10px;
-    bottom: -10px;
+  .rightCol {
+    height: auto; /* Let the window handle scrolling! */
+    overflow-y: visible;
+    padding: 20px 15px;
+  }
+
+  .cardContainer {
+    position: sticky;
+    top: 100px; /* Sticks right below the fixed navbar */
+    height: 550px;
+    margin-bottom: 70vh; /* Scroll distance before next card appears */
+    width: 100%;
+  }
+
+  .cardContainer:last-child {
+    margin-bottom: 50px;
+  }
+
+  .card {
+    height: 100%;
+    padding: 35px 20px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .cardContent p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-  
   .card {
     padding: 40px 20px;
   }

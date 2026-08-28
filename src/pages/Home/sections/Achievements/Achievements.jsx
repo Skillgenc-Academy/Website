@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './Achievements.module.css'
 
 const stats = [
-  { value: 8000, suffix: '+', label: 'Students Trained', piece: '♟' },
+  { value: 5000, suffix: '+', label: 'Students Trained', piece: '♟' },
   { value: 50, suffix: '+', label: 'Expert Coaches', piece: '♛' },
   { value: 500, suffix: '+', label: 'Tournament Participants', piece: '♞' },
-  { value: 1000, suffix: '+', label: 'Awards & Achievements', piece: '♚' },
+  { value: 100, suffix: '+', label: 'Awards & Achievements', piece: '♚' },
 ]
 
 function CountUp({ target, suffix, isVisible }) {

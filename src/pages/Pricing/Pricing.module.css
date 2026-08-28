@@ -124,6 +124,50 @@
   justify-content: center;
 }
 
+/* Trust Banner */
+.trustBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(1, 83, 217, 0.03);
+  border: 1px dashed rgba(1, 83, 217, 0.3);
+  border-radius: 16px;
+  padding: 24px 32px;
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.trustIcon {
+  color: #0153D9;
+  flex-shrink: 0;
+}
+
+.trustText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trustText strong {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #013D96;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.trustText span {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Detailed Plans Header */
+.detailedPlans {
+  margin-top: 100px;
+}
+
 /* Table */
 .tableWrap {
   overflow-x: auto;
@@ -194,7 +238,7 @@
 .toggleBtn.active {
   background: #0153D9;
   border-color: #0153D9;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -623,4 +667,14 @@
   color: rgba(0, 0, 0, 0.7);
   max-width: 600px;
   margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .trustBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+    margin-top: 32px;
+  }
 }

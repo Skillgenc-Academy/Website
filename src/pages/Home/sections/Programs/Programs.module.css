@@ -63,7 +63,7 @@
 /* ─── Card ─────────────────────────────────────────────── */
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   background: #fff;
   border: 1.5px solid rgba(1,83,217,0.3);
   border-radius: 24px;
@@ -209,25 +209,25 @@
 /* ─── Metric Boxes ──────────────────────────────────────── */
 .metrics {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .metricBox {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 8px;
+  padding: 12px 10px;
   background: rgba(1,83,217,0.06);
   border: 1.5px solid rgba(1,83,217,0.18);
-  border-radius: 14px;
+  border-radius: 12px;
   flex: 1;
   min-width: 100px;
 }
 
 .metricIcon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -243,7 +243,7 @@
 
 .metricValue {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #000;
   white-space: nowrap;
@@ -395,7 +395,7 @@
   .bigPiece { font-size: 2.8rem; }
 
   .metrics { gap: 8px; }
-  .metricBox { padding: 12px 12px; gap: 8px; min-width: 90px; }
+  .metricBox { padding: 10px 10px; gap: 8px; min-width: 90px; }
   .metricIcon { width: 32px; height: 32px; }
 
   .ctas { flex-direction: column; }

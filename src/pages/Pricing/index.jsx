@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp, ChessRook, ChessKnight, ChessQueen, ShieldCheck } from 'lucide-react'
 import styles from './Pricing.module.css'
 
 const faqs = [
@@ -55,14 +55,7 @@ export default function Pricing() {
     {
       theme: 'blue',
       isPopular: false,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 6 21 v -4 l -2 -3 V 9 h 16 v 5 l -2 3 v 4" />
-          <path d="M 4 9 V 3 h 3 v 3 h 3 V 3 h 4 v 3 h 3 V 3 h 3 v 6" />
-          <path d="M 5 14 h 14" />
-        </svg>
-      ),
+      icon: <ChessRook size={32} strokeWidth={2} />,
       label: 'FOUNDATION TRACK',
       title: '8 Classes',
       perClass: '₹310',
@@ -80,13 +73,7 @@ export default function Pricing() {
     {
       theme: 'green',
       isPopular: true,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 19 21 Q 23 10 16 2 L 13 4 L 9 4 L 2 9 L 3 13 L 8 14 Q 3 18 5 21" />
-          <circle cx="9" cy="8" r="1.5" />
-        </svg>
-      ),
+      icon: <ChessKnight size={32} strokeWidth={2} />,
       label: 'GROWTH TRACK',
       title: '24 Classes',
       perClass: '₹290',
@@ -105,16 +92,7 @@ export default function Pricing() {
     {
       theme: 'purple',
       isPopular: false,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 5 21 v -5 l -3 -7 l 6 3 l 4 -9 l 4 9 l 6 -3 l -3 7 v 5" />
-          <circle cx="2" cy="8" r="1.5" />
-          <circle cx="12" cy="2" r="1.5" />
-          <circle cx="22" cy="8" r="1.5" />
-          <path d="M 5 16 h 14" />
-        </svg>
-      ),
+      icon: <ChessQueen size={32} strokeWidth={2} />,
       label: 'PERFORMANCE TRACK',
       title: '48 Classes',
       perClass: '₹280',
@@ -136,14 +114,7 @@ export default function Pricing() {
     {
       theme: 'blue',
       isPopular: false,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 6 21 v -4 l -2 -3 V 9 h 16 v 5 l -2 3 v 4" />
-          <path d="M 4 9 V 3 h 3 v 3 h 3 V 3 h 4 v 3 h 3 V 3 h 3 v 6" />
-          <path d="M 5 14 h 14" />
-        </svg>
-      ),
+      icon: <ChessRook size={32} strokeWidth={2} />,
       label: 'STARTER TRACK',
       title: '8 Classes / mo',
       perClass: '₹850',
@@ -160,13 +131,7 @@ export default function Pricing() {
     {
       theme: 'green',
       isPopular: true,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 19 21 Q 23 10 16 2 L 13 4 L 9 4 L 2 9 L 3 13 L 8 14 Q 3 18 5 21" />
-          <circle cx="9" cy="8" r="1.5" />
-        </svg>
-      ),
+      icon: <ChessKnight size={32} strokeWidth={2} />,
       label: 'GROWTH TRACK',
       title: '12 Classes / mo',
       perClass: '₹800',
@@ -183,16 +148,7 @@ export default function Pricing() {
     {
       theme: 'purple',
       isPopular: false,
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M 4 21 h 16" />
-          <path d="M 5 21 v -5 l -3 -7 l 6 3 l 4 -9 l 4 9 l 6 -3 l -3 7 v 5" />
-          <circle cx="2" cy="8" r="1.5" />
-          <circle cx="12" cy="2" r="1.5" />
-          <circle cx="22" cy="8" r="1.5" />
-          <path d="M 5 16 h 14" />
-        </svg>
-      ),
+      icon: <ChessQueen size={32} strokeWidth={2} />,
       label: 'ELITE TRACK',
       title: '16 Classes / mo',
       perClass: '₹750',
@@ -319,6 +275,14 @@ export default function Pricing() {
             ))}
           </div>
 
+          {/* Trust Banner for 7-Day Refund Policy */}
+          <div className={styles.trustBanner}>
+            <ShieldCheck className={styles.trustIcon} size={40} />
+            <div className={styles.trustText}>
+              <strong>7-Day Money-Back Guarantee</strong>
+              <span>If you or your child aren't completely satisfied within the first 7 days, we'll gladly refund your entire package fee. No questions asked.</span>
+            </div>
+          </div>
         </div>
       </section>
 

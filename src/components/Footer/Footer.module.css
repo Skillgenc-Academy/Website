@@ -83,6 +83,13 @@
   flex-shrink: 0;
 }
 
+.knightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4px;
+}
+
 .logoSubText {
   font-size: 0.6rem;
   font-weight: 700;

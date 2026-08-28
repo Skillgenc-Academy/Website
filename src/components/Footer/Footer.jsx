@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react'
 import styles from './Footer.module.css'
+import knightLogo from '../../assets/knight-logo-transparent.png'
 
 const quickLinks = [
   { label: 'About Us', href: '/about' },
@@ -51,6 +52,9 @@ export default function Footer() {
             {/* Brand Column */}
             <div className={styles.brandCol}>
               <Link to="/" className={styles.logo}>
+                <div className={styles.knightIcon}>
+                  <img src={knightLogo} alt="Skillgenc Logo" style={{ width: '40px', height: 'auto', objectFit: 'contain' }} />
+                </div>
                 <div className={styles.logoCol}>
                   <img src="/logo.png" alt="Skillgenc" className={styles.logoImage} />
                   <span className={styles.logoSubText}>CHESS ACADEMY</span>

@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Play } from 'lucide-react'
-import { Suspense, lazy } from 'react'
+import { ArrowRight } from 'lucide-react'
 import styles from './Hero.module.css'
-
-const ChessBoard3D = lazy(() => import('../../../../components/ChessBoard3D/ChessBoard3D'))
+import CountUp from '../../../../components/CountUp/CountUp'
 
 export default function Hero() {
   return (
@@ -36,17 +34,17 @@ export default function Hero() {
 
             <div className={styles.stats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>8,000+</span>
+                <span className={styles.statNum}><CountUp end={5000} suffix="+" /></span>
                 <span className={styles.statLabel}>Students</span>
               </div>
               <div className={styles.statDivider} />
               <div className={styles.stat}>
-                <span className={styles.statNum}>50+</span>
+                <span className={styles.statNum}><CountUp end={50} suffix="+" /></span>
                 <span className={styles.statLabel}>Expert Coaches</span>
               </div>
               <div className={styles.statDivider} />
               <div className={styles.stat}>
-                <span className={styles.statNum}>3</span>
+                <span className={styles.statNum}><CountUp end={3} /></span>
                 <span className={styles.statLabel}>Cities</span>
               </div>
             </div>
@@ -62,20 +60,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: 3D Chess Board */}
-          <div className={styles.canvasWrap}>
-            <div className={styles.canvasGlow} />
-            <Suspense fallback={
-              <div className={styles.chessFallback}>
-                <div className={styles.chessEmoji}>♚</div>
-                <div className={styles.loadingDots}>
-                  <span /><span /><span />
-                </div>
-              </div>
-            }>
-              <ChessBoard3D />
-            </Suspense>
-          </div>
         </div>
       </div>
 

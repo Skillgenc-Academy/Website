@@ -53,6 +53,51 @@ export const testimonials = [
     text: "Both my twins attend Skillgenc and they absolutely love it. The way they break down complex concepts for young kids is remarkable. Both have developed incredible patience and analytical thinking skills.",
     location: "Pune",
   },
+  {
+    id: 7,
+    name: "Neha Sharma",
+    role: "Parent",
+    child: "Daughter, Age 10",
+    rating: 5,
+    text: "We live in the US and finding a reliable online chess academy was tough until we found Skillgenc. The coaches adjust to our timezone perfectly and my daughter's game has improved tremendously.",
+    location: "California, USA",
+  },
+  {
+    id: 8,
+    name: "Rajesh Iyer",
+    role: "Parent",
+    child: "Son, Age 12",
+    rating: 5,
+    text: "Despite the time difference, the online classes are conducted seamlessly. The structured curriculum and practice puzzles have given my son a clear path to improving his rating.",
+    location: "Toronto, Canada",
+  },
+  {
+    id: 9,
+    name: "Priya Desai",
+    role: "Parent",
+    child: "Son, Age 8",
+    rating: 5,
+    text: "Skillgenc's platform is brilliant! My son loves the interactive puzzles and the coach's feedback is always so detailed. Being far from India, it's great to have such high-quality coaching accessible.",
+    location: "Netherlands",
+  },
+  {
+    id: 10,
+    name: "Arjun Reddy",
+    role: "Parent",
+    child: "Daughter, Age 14",
+    rating: 5,
+    text: "The competitive tournament preparation here is top-notch. My daughter regularly plays practice matches with students from all over the world. Highly recommended for serious chess learners.",
+    location: "Dubai, UAE",
+  },
+  {
+    id: 11,
+    name: "Meera Krishnan",
+    role: "Parent",
+    child: "Twins, Age 9",
+    rating: 5,
+    text: "I enrolled both my kids and it's the best decision I've made. The coaches are incredibly patient and keep the kids engaged for the entire session. The progress tracking helps me see their improvement weekly.",
+    location: "Singapore",
+  }
 ];
 
 export const googleReviews = [

@@ -6,12 +6,21 @@ import 'swiper/css/navigation'
 import styles from './LifeAtSkillgenc.module.css'
 
 const galleryImages = [
-  { id: 1, src: '/life-1.jpg', alt: 'Students playing chess in classroom' },
-  { id: 2, src: '/life-2.jpg', alt: 'Coach explaining a chess puzzle' },
-  { id: 3, src: '/life-3.jpg', alt: 'Local chess tournament at the academy' },
-  { id: 4, src: '/life-4.jpg', alt: 'Kids holding their trophies' },
-  { id: 5, src: '/life-5.jpg', alt: 'Online chess coaching session' },
-  { id: 6, src: '/life-6.jpg', alt: 'Friendly blitz game between friends' },
+  { id: 1, src: '/PHOTO-2026-02-24-14-30-34.jpg', alt: 'Chess Class' },
+  { id: 2, src: '/PHOTO-2026-03-20-14-17-10.jpg', alt: 'Chess Practice' },
+  { id: 3, src: '/PHOTO-2026-04-03-16-56-32.jpg', alt: 'Tournament' },
+  { id: 4, src: '/Poster.jpg', alt: 'Skillgenc Poster' },
+  { id: 5, src: '/Schools.jpeg', alt: 'School Program' },
+  { id: 6, src: '/WhatsApp Image 2026-02-11 at 6.55.47 PM.jpeg', alt: 'Kids Playing' },
+  { id: 7, src: '/02cea94d-eee1-4c56-86b1-3f3c208dd9f8.jpg', alt: 'Academy' },
+  { id: 8, src: '/9bbd65a6-5e6d-4b4b-ae74-1c45741d7f2b.jpg', alt: 'Students' },
+  { id: 9, src: '/Chesskit.jpeg', alt: 'Chess Kit' },
+  { id: 10, src: '/Coach Teaching Classroom.jpg', alt: 'Coach Teaching' },
+]
+
+const slides = [
+  galleryImages.slice(0, 5),
+  galleryImages.slice(5, 10)
 ]
 
 export default function LifeAtSkillgenc() {
@@ -46,10 +55,10 @@ export default function LifeAtSkillgenc() {
             loop
             className={styles.swiper}
           >
-            {[1, 2, 3].map((slideIndex) => (
+            {slides.map((slideImages, slideIndex) => (
               <SwiperSlide key={slideIndex}>
                 <div className={styles.bentoGrid}>
-                  {galleryImages.map((img, index) => (
+                  {slideImages.map((img, index) => (
                     <div key={img.id + '-' + slideIndex} className={`${styles.imageCard} ${styles['item' + (index + 1)]}`}>
                       <img 
                         src={img.src} 

@@ -141,14 +141,14 @@ export default function BookTrial() {
                   <label>Parent Name</label>
                   <div className={styles.inputWrap}>
                     <User size={18} className={styles.inputIcon} />
-                    <input type="text" name="parentName" value={formData.parentName} onChange={handleChange} required placeholder="John Doe" />
+                    <input type="text" name="parentName" value={formData.parentName} onChange={handleChange} required placeholder="Ravi Kumar" />
                   </div>
                 </div>
                 <div className={styles.inputGroup}>
                   <label>Child Name</label>
                   <div className={styles.inputWrap}>
                     <User size={18} className={styles.inputIcon} />
-                    <input type="text" name="childName" value={formData.childName} onChange={handleChange} placeholder="Jane Doe" />
+                    <input type="text" name="childName" value={formData.childName} onChange={handleChange} placeholder="Arjun Kumar" />
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function BookTrial() {
                   <label>Email Address</label>
                   <div className={styles.inputWrap}>
                     <Mail size={18} className={styles.inputIcon} />
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="john@example.com" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="ravi@example.com" />
                   </div>
                 </div>
               </div>
