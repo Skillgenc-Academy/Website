@@ -89,12 +89,19 @@
 }
 
 @media (max-width: 768px) {
+  .marqueeWrap {
+    gap: 24px;
+  }
+  .marqueeContent {
+    gap: 24px;
+  }
   .partnerItem {
-    height: 60px;
+    height: 70px;
+    min-width: 120px;
   }
   .partnerLogo {
-    max-height: 50px;
-    max-width: 140px;
+    max-height: 65px;
+    max-width: 180px;
   }
   .partnerText {
     font-size: 0.95rem;
