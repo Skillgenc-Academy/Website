@@ -6,12 +6,12 @@ import 'swiper/css/navigation'
 import styles from './Gallery.module.css'
 
 const achievements = [
-  { id: 1, title: 'State Under-12 Champion', student: 'Rohan K.', emoji: '🏆', photo: '/student-1.jpg' },
-  { id: 2, title: 'FIDE Rating 1850 Achieved', student: 'Aisha M.', emoji: '♟', photo: '/student-2.jpg' },
-  { id: 3, title: 'National Semi-Finalist', student: 'Vikram S.', emoji: '🥈', photo: '/student-3.jpg' },
-  { id: 4, title: 'Inter-School Gold Medal', student: 'Neha P.', emoji: '🏅', photo: '/student-4.jpg' },
-  { id: 5, title: 'District Blitz Winner', student: 'Arjun D.', emoji: '⚡', photo: '/student-5.jpg' },
-  { id: 6, title: 'Youngest Candidate Master', student: 'Kabir R.', emoji: '🌟', photo: '/student-6.jpg' },
+  { id: 1, title: '5th Place (U-9)', student: 'Aadhya', emoji: '🏆', photo: '/student-1.jpg', description: 'Achieved 5th place (5/6) among 51 participants in the 29th Sri Narayana Guru Trophy Open & Age Category Chess Tournament 2026.' },
+  { id: 2, title: 'FIDE Rating 1806', student: 'Seyan', emoji: '♟', photo: '/student-2.jpg', description: 'Achieved a FIDE Standard Rating of 1806 through participation in FIDE-rated tournaments, including the Open NK Rapid Jeugd 2026.' },
+  { id: 3, title: 'Team Gold Medal', student: 'Arav Agarwal', emoji: '🥇', photo: '/student-3.jpg', description: 'Won the Gold Medal at the 2025 Maritime Scholastic Chess Team Championship.' },
+  { id: 4, title: 'Under-11 Runner-up', student: 'Bhavya Chawla', emoji: '🥈', photo: '/student-4.jpg', description: 'Achieved an incredible 2nd position (1st runner-up) in the Under-11 Girls category at the Shri Ajay Aj... Memorial Open Chess Tournament 2025.' },
+  { id: 5, title: '1st Place Open', student: 'Dhruv', emoji: '🏆', photo: '/student-5.jpg', description: 'Won 1st place in the Open Classical Tournament in California.' },
+  { id: 6, title: 'U-10 1st Prize', student: 'Aniketh Dash', emoji: '🥇', photo: '/student-6.jpg', description: 'Got 1st Prize in the U-10 Category in Germany.' },
 ]
 
 export default function Gallery() {
@@ -78,6 +78,7 @@ export default function Gallery() {
                   <div className={styles.content}>
                     <div className={styles.achievementTag}>{item.title}</div>
                     <h3 className={styles.studentName}>{item.student}</h3>
+                    <p className={styles.achievementDesc}>{item.description}</p>
                   </div>
                 </div>
               </SwiperSlide>

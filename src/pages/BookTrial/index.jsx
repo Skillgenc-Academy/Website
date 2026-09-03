@@ -108,7 +108,7 @@ export default function BookTrial() {
                   <div className={styles.stepNum}>2</div>
                   <div>
                     <h4>Meet Coach</h4>
-                    <p>Attend a 60-min interactive session.</p>
+                    <p>Attend a 30-min interactive session.</p>
                   </div>
                 </div>
                 <div className={styles.stepLine} />

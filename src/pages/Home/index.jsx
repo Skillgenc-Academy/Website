@@ -20,16 +20,16 @@ export default function Home() {
         <meta name="description" content="Skillgenc offers expert chess coaching, structured programs for all levels, and comprehensive tournaments. Join our academy today!" />
       </Helmet>
       <Hero />
-      <ResearchBenefits />
       <WhyBetter />
-      <OnlineVsOffline />
       <Programs />
+      <OnlineVsOffline />
       <Coaches />
+      <ResearchBenefits />
       <Testimonials />
+      <Achievements />
       <GoogleReviews />
       <Gallery />
       <LifeAtSkillgenc />
-      <Achievements />
       <FAQ />
     </div>
   )

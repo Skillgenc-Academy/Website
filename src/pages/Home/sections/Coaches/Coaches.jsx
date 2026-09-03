@@ -63,7 +63,7 @@ export default function Coaches() {
                         className={styles.avatarInitial}
                         style={{ display: coach.image ? 'none' : 'flex' }}
                       >
-                        {coach.name.split(' ').map(w => w[0]).join('')}
+                        {coach.initials || coach.name.split(' ').map(w => w[0]).join('')}
                       </span>
                       <div className={styles.avatarGlow} />
                     </div>
