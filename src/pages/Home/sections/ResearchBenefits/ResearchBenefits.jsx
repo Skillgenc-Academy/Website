@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Autoplay } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 import styles from './ResearchBenefits.module.css'
 
 export default function ResearchBenefits() {
+  const [swiper, setSwiper] = useState(null);
+
   const cards = [
     {
       title: "CHESS PROMOTES BRAIN GROWTH",
@@ -90,10 +93,10 @@ export default function ResearchBenefits() {
           {/* Right Column: Swiper Carousel */}
           <div className={styles.rightCol}>
             <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
+              modules={[Pagination, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
-              navigation
+              onSwiper={setSwiper}
               loop={true}
               pagination={{ clickable: true }}
               autoplay={{ delay: 3500, disableOnInteraction: false }}
@@ -115,6 +118,14 @@ export default function ResearchBenefits() {
                   </div>
                 </SwiperSlide>
               ))}
+
+              {/* Custom Navigation Arrows */}
+              <button className={styles.swiperPrev} onClick={() => swiper?.slidePrev()}>
+                <ChevronLeft size={28} strokeWidth={2.5} />
+              </button>
+              <button className={styles.swiperNext} onClick={() => swiper?.slideNext()}>
+                <ChevronRight size={28} strokeWidth={2.5} />
+              </button>
             </Swiper>
           </div>
         </div>
