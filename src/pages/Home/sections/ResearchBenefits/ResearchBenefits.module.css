@@ -1,7 +1,7 @@
 .section {
   background: #ffffff;
   padding: 80px 0;
-  overflow: visible; /* Need visible for sticky to work relative to page */
+  overflow: hidden; 
 }
 
 .grid {
@@ -18,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 0; /* Fix CSS grid blowout */
 }
 
 .brainImage {
@@ -27,40 +28,33 @@
   object-fit: contain;
 }
 
-/* Right Column - Scrolling List */
+/* Right Column - Swiper Container */
 .rightCol {
-  display: flex;
-  flex-direction: column;
-  height: 600px;
-  overflow-y: auto;
-  padding: 50px 20px; 
-  scrollbar-width: none; /* Hide for Firefox */
-  -ms-overflow-style: none; /* Hide for IE/Edge */
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  min-width: 0; /* Fix CSS grid blowout caused by Swiper */
 }
 
-.rightCol::-webkit-scrollbar {
-  display: none; /* Hide for Chrome, Safari, and Opera */
+.swiperContainer {
+  width: 100%;
+  padding-bottom: 50px; /* space for pagination */
 }
 
 .cardContainer {
-  position: sticky;
-  top: 50px;
+  position: relative;
   height: 500px;
-  margin-bottom: 400px; 
   width: 100%;
-}
-
-.cardContainer:last-child {
-  margin-bottom: 0;
+  padding: 15px; /* space for backdrop */
 }
 
 /* Pink backdrop behind the card */
 .cardBackdrop {
   position: absolute;
-  top: 0;
-  left: 15px;
-  right: -15px;
-  bottom: -15px;
+  top: 15px;
+  left: 30px;
+  right: 0px;
+  bottom: 0px;
   background-color: #ff9ff3;
   border-radius: 20px;
   z-index: 0;
@@ -80,11 +74,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  scrollbar-width: none;
 }
 
 .card::-webkit-scrollbar {
-  display: none; /* Hide scrollbar Chrome/Safari */
+  display: none;
 }
 
 .cardTitle {
@@ -125,33 +119,39 @@
   z-index: 1;
 }
 
+/* Custom Swiper Navigation */
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  color: var(--blue);
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.swiperContainer :global(.swiper-button-next::after),
+.swiperContainer :global(.swiper-button-prev::after) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background: var(--blue);
+}
+
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .rightCol {
-    height: auto; /* Let the window handle scrolling! */
-    overflow-y: visible;
-    padding: 20px 15px;
-  }
-
   .cardContainer {
-    position: sticky;
-    top: 100px; /* Sticks right below the fixed navbar */
-    height: 550px;
-    margin-bottom: 70vh; /* Scroll distance before next card appears */
-    width: 100%;
-  }
-
-  .cardContainer:last-child {
-    margin-bottom: 50px;
+    height: 450px;
   }
 
   .card {
-    height: 100%;
-    padding: 35px 20px;
+    padding: 30px 20px;
     justify-content: flex-start;
     overflow-y: auto;
   }

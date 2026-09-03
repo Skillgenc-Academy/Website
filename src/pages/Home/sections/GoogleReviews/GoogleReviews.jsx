@@ -60,7 +60,7 @@ export default function GoogleReviews() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         {/* Header */}
         <div className={styles.header}>
-          <h1 className={styles.mainTitle}>What Our Students' Parents Say</h1>
+          <h1 className={styles.mainTitle}>What World Says About Skillgenc</h1>
           <h2 className={styles.title}>Real reviews from real families on Google</h2>
 
           <div className={styles.ratingSummary}>
