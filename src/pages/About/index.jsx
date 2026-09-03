@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import styles from './About.module.css'
 import worldMapImage from '../../assets/world-map.jpg'
 import MapInfographic from './MapInfographic'
+import Partners from '../../components/Partners/Partners'
 
 export default function About() {
   return (
@@ -249,6 +250,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Partners / Collaborations */}
+      <Partners />
 
       {/* 07 — Our Vision */}
       <section className={styles.visionSection}>

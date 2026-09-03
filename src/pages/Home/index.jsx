@@ -10,6 +10,7 @@ import Gallery from './sections/Gallery/Gallery'
 import LifeAtSkillgenc from './sections/LifeAtSkillgenc/LifeAtSkillgenc'
 import Achievements from './sections/Achievements/Achievements'
 import FAQ from './sections/FAQ/FAQ'
+import Partners from '../../components/Partners/Partners'
 import { Helmet } from 'react-helmet-async'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <meta name="description" content="Skillgenc offers expert chess coaching, structured programs for all levels, and comprehensive tournaments. Join our academy today!" />
       </Helmet>
       <Hero />
+      <Partners />
       <WhyBetter />
       <Programs />
       <OnlineVsOffline />

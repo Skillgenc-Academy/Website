@@ -74,8 +74,8 @@
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: linear-gradient(135deg, #0153D9, #013D96);
   display: flex;
@@ -88,7 +88,7 @@
 
 .avatarInitial {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #000000;
 }
