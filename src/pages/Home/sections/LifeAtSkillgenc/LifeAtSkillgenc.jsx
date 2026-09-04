@@ -1,6 +1,7 @@
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules'
-import { ChevronLeft, ChevronRight, Camera } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Camera, X } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import styles from './LifeAtSkillgenc.module.css'
@@ -24,6 +25,8 @@ const slides = [
 ]
 
 export default function LifeAtSkillgenc() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <section className={`section ${styles.section}`}>
       <div className="container">
@@ -59,7 +62,12 @@ export default function LifeAtSkillgenc() {
               <SwiperSlide key={slideIndex}>
                 <div className={styles.bentoGrid}>
                   {slideImages.map((img, index) => (
-                    <div key={img.id + '-' + slideIndex} className={`${styles.imageCard} ${styles['item' + (index + 1)]}`}>
+                    <div 
+                      key={img.id + '-' + slideIndex} 
+                      className={`${styles.imageCard} ${styles['item' + (index + 1)]}`}
+                      onClick={() => setSelectedImage(img)}
+                      style={{ cursor: 'pointer' }}
+                    >
                       <img 
                         src={img.src} 
                         alt={img.alt} 
@@ -84,6 +92,18 @@ export default function LifeAtSkillgenc() {
           </Swiper>
         </div>
       </div>
+
+      {/* Fullscreen Image Modal */}
+      {selectedImage && (
+        <div className={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={() => setSelectedImage(null)}>
+              <X size={32} />
+            </button>
+            <img src={selectedImage.src} alt={selectedImage.alt} className={styles.modalImage} />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
