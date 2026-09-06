@@ -52,7 +52,6 @@ export default function Coaches() {
                         <img 
                           src={coach.image} 
                           alt={coach.name} 
-                          style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                           onError={(e) => {
                             e.target.style.display = 'none';
                             e.target.nextSibling.style.display = 'flex';

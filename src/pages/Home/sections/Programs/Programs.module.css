@@ -355,12 +355,53 @@
   border-radius: 0 0 22px 0;
 }
 
+/* ─── Card Wrapper (for side arrows) ────────────────────── */
+.cardWrapper {
+  position: relative;
+}
+
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid rgba(1, 83, 217, 0.25);
+  color: #0153D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(1, 83, 217, 0.15);
+  transition: all 0.25s ease;
+}
+
+.arrowBtn:hover {
+  background: #0153D9;
+  color: #fff;
+  border-color: #0153D9;
+  box-shadow: 0 5px 18px rgba(1, 83, 217, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.arrowBtn:first-child {
+  left: -28px;
+}
+
+.arrowBtn:last-child {
+  right: -28px;
+}
+
 /* ─── Dots ───────────────────────────────────────────────── */
 .dots {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 28px;
+  margin-top: 20px;
 }
 
 .dot {
@@ -402,9 +443,27 @@
   .ctas .btn { width: 100%; justify-content: center; }
 
   .decorPiece { font-size: 7rem; }
+
+  /* Give room for absolutely-positioned arrows */
+  .section { overflow: visible; }
 }
 
 @media (max-width: 640px) {
+  /* Smaller arrows on mobile, keep them absolute on sides */
+  .arrowBtn {
+    width: 34px;
+    height: 34px;
+    left: auto;
+    right: auto;
+  }
+
+  .arrowBtn:first-child {
+    left: -17px;
+  }
+
+  .arrowBtn:last-child {
+    right: -17px;
+  }
   /* Tabs: 3-column grid like reference image */
   .tabs {
     display: grid;

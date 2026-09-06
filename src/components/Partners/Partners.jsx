@@ -52,7 +52,7 @@ export default function Partners() {
         {/* We render the content twice for seamless infinite scrolling */}
         <div className={styles.marqueeContent}>
           {partnersList.map((partner, index) => (
-            <div key={`partner-1-${index}`} className={styles.partnerItem} title={partner.name}>
+            <div key={`partner-1-${index}`} className={styles.partnerItem}>
               {partner.textOnly ? (
                 <span className={styles.partnerText}>{partner.name}</span>
               ) : (
@@ -72,7 +72,7 @@ export default function Partners() {
         
         <div className={styles.marqueeContent} aria-hidden="true">
           {partnersList.map((partner, index) => (
-            <div key={`partner-2-${index}`} className={styles.partnerItem} title={partner.name}>
+            <div key={`partner-2-${index}`} className={styles.partnerItem}>
               {partner.textOnly ? (
                 <span className={styles.partnerText}>{partner.name}</span>
               ) : (

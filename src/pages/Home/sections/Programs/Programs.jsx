@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  ArrowRight, CalendarDays, BookOpen, Clock,
+  ArrowRight, CalendarDays, BookOpen, Clock, ChevronLeft, ChevronRight,
   BookMarked, Target, Lightbulb, X, Grid2X2, Flag,
   Puzzle, Star, Trophy, Brain, Shield, Globe, Crosshair
 } from 'lucide-react'
@@ -52,6 +52,9 @@ export default function Programs() {
   const [active, setActive] = useState(0)
   const prog = programs[active]
 
+  const prev = () => setActive(i => (i - 1 + programs.length) % programs.length)
+  const next = () => setActive(i => (i + 1) % programs.length)
+
   return (
     <section id="programs" className={`section ${styles.section}`}>
       <div className="container">
@@ -83,7 +86,12 @@ export default function Programs() {
         </div>
 
         {/* Active Program Card */}
-        <div className={`${styles.card} ${prog.premium ? styles.cardPremium : ''}`} key={prog.id}>
+        <div className={styles.cardWrapper}>
+          <button className={styles.arrowBtn} onClick={prev} aria-label="Previous program">
+            <ChevronLeft size={22} strokeWidth={2.5} />
+          </button>
+
+          <div className={`${styles.card} ${prog.premium ? styles.cardPremium : ''}`} key={prog.id}>
 
           {/* LEFT PANEL */}
           <div className={styles.cardLeft}>
@@ -185,7 +193,12 @@ export default function Programs() {
           </div>
 
           {prog.premium && <div className={styles.premiumGlow} />}
-        </div>
+          </div>{/* end card */}
+
+          <button className={styles.arrowBtn} onClick={next} aria-label="Next program">
+            <ChevronRight size={22} strokeWidth={2.5} />
+          </button>
+        </div>{/* end cardWrapper */}
 
         {/* Dots */}
         <div className={styles.dots}>

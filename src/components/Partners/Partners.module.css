@@ -48,9 +48,6 @@
   animation: scroll 40s linear infinite;
 }
 
-.marqueeWrap:hover .marqueeContent {
-  animation-play-state: paused;
-}
 
 .partnerItem {
   display: flex;
