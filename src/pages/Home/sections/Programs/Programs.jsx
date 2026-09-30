@@ -155,6 +155,13 @@ export default function Programs() {
                 Book Free Trial
               </Link>
             </div>
+            {prog.level === 'Beginner' && (
+              <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+                <Link to="/blogs/best-chess-academy-bengaluru-beginners" style={{ fontSize: '0.9rem', color: 'var(--primary)', textDecoration: 'underline' }}>
+                  New to Chess? Read our Beginner's Guide
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* RIGHT PANEL */}

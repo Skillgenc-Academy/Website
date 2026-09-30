@@ -11,6 +11,7 @@ import Blogs from './pages/Blogs'
 import Contact from './pages/Contact'
 import BookTrial from './pages/BookTrial'
 import Policies from './pages/Policies'
+import BlogDetail from './pages/BlogDetail'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -41,6 +42,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/platform" element={<Platform />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/book-trial" element={<BookTrial />} />
           <Route path="/privacy-policy" element={<Policies />} />

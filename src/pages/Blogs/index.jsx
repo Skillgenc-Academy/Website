@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { blogs, blogCategories } from '../../data/blogs'
+import { blogImageMap } from '../../utils/blogImages'
 import styles from './Blogs.module.css'
 
 export default function Blogs() {
@@ -39,10 +40,7 @@ export default function Blogs() {
             {filteredBlogs.map(blog => (
               <Link to={`/blogs/${blog.slug}`} key={blog.id} className={styles.card}>
                 <div className={styles.imageWrap}>
-                  <div className={styles.imagePlaceholder}>
-                    ♚
-                  </div>
-                  <div className={styles.category}>{blog.category}</div>
+                  <img src={blogImageMap[blog.image] || blogImageMap["Blog1"]} alt={blog.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
                 <div className={styles.content}>
                   <div className={styles.meta}>
@@ -78,3 +76,5 @@ export default function Blogs() {
     </div>
   )
 }
+
+
