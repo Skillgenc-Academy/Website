@@ -380,6 +380,13 @@
   margin-bottom: 12px;
 }
 
+.classCount {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #334155;
+  margin: -4px 0 16px;
+}
+
 .planPriceWrap {
   display: flex;
   align-items: baseline;

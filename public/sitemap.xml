@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skillgenc.com/</loc>
@@ -22,10 +22,98 @@
   </url>
   <url>
     <loc>https://skillgenc.com/contact</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skillgenc.com/book-trial</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/why-more-girls-are-taking-up-competitive-chess</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/why-isnt-my-kid-getting-fide-rating</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/5-checkmate-patterns-every-kid-should-know</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/how-chess-helps-in-academics</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/how-fide-rating-works-is-your-child-ready</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/best-age-to-start-chess-for-kids</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/does-chess-make-kids-smarter</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/does-chess-improve-grades-maths</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/chess-and-adhd-can-chess-help-kids-focus</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/benefits-of-chess-for-kids</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-noida</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-ahmedabad</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-chennai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-vizag</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-pune</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-mumbai</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-chess-classes-hyderabad</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/chess-coaching-centers-bengaluru-checklist</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/best-chess-academy-bengaluru-beginners</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/online-vs-offline-chess-classes-bengaluru</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/chess-classes-near-me-bengaluru</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skillgenc.com/blogs/best-chess-classes-bengaluru-for-kids</loc>
+    <priority>0.7</priority>
   </url>
 </urlset>

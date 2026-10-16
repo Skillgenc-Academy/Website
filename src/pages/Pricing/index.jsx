@@ -57,12 +57,13 @@ export default function Pricing() {
       isPopular: false,
       icon: <ChessRook size={32} strokeWidth={2} />,
       label: 'FOUNDATION TRACK',
-      title: '8 Classes',
-      perClass: '₹310',
+      title: '1 Month (4 Weeks)',
+      classCount: '8 Classes (2 classes/week)',
+      monthlyFee: '₹2,500',
       payText: 'Pay for 8 classes • Total package: ₹2,500',
       bestFor: 'Taking the first step towards structured and engaging chess learning.',
       features: [
-        '8 live, instructor-led chess classes',
+        '8 live, instructor-led chess classes (2 classes/week)',
         'Personalised level assessment',
         'Structured chess curriculum',
         'Guided practice and problem-solving',
@@ -75,12 +76,13 @@ export default function Pricing() {
       isPopular: true,
       icon: <ChessKnight size={32} strokeWidth={2} />,
       label: 'GROWTH TRACK',
-      title: '24 Classes',
-      perClass: '₹290',
-      payText: 'Pay for 24 classes • Total package: ₹7,000',
+      title: '3 Months (12 Weeks)',
+      classCount: '24 Classes (2 classes/week)',
+      monthlyFee: '₹2,350',
+      payText: 'Pay for 12 classes • Total package: ₹9,600',
       bestFor: 'Parents looking for consistent learning and visible progress over a two-to-three month journey.',
       features: [
-        '24 live, instructor-led chess classes',
+        '24 live, instructor-led chess classes (2 classes/week)',
         'Everything covered in the Foundation Track',
         'Deeper tactical and positional training',
         'Regular practice and game-based learning',
@@ -94,12 +96,13 @@ export default function Pricing() {
       isPopular: false,
       icon: <ChessQueen size={32} strokeWidth={2} />,
       label: 'PERFORMANCE TRACK',
-      title: '48 Classes',
-      perClass: '₹280',
-      payText: 'Pay for 48 classes • Total package: ₹13,500',
+      title: '5 Months (20 Weeks)',
+      classCount: '40 Classes (2 classes/week)',
+      monthlyFee: '₹2,250',
+      payText: 'Pay for 48 classes • Total package: ₹12,000',
       bestFor: 'Parents looking for deeper learning, continued development and a more comprehensive chess journey.',
       features: [
-        '48 live, instructor-led chess classes',
+        '40 live, instructor-led chess classes (2 classes/week)',
         'Everything covered in the Growth Track',
         'Advanced tactical and strategic training',
         'Deeper game analysis and performance feedback',
@@ -224,9 +227,10 @@ export default function Pricing() {
                      <div className={styles.planLabelPill}>{plan.label}</div>
                    </div>
                    <h2 className={styles.planTitle}>{plan.title}</h2>
+                   {plan.classCount && <p className={styles.classCount}>{plan.classCount}</p>}
                    <div className={styles.planPriceWrap}>
-                     <span className={styles.planPrice}>{plan.perClass}</span>
-                     <span className={styles.planPerClass}> per class</span>
+                     <span className={styles.planPrice}>{plan.monthlyFee ?? plan.perClass}</span>
+                     <span className={styles.planPerClass}>{plan.monthlyFee ? ' per month' : ' per class'}</span>
                    </div>
                    <p className={styles.planPayText}>{plan.payText}</p>
                 </div>
